@@ -3,10 +3,13 @@
     background-color: transparent;
     padding: 0px;
     margin: 0px;
-    color: var(--white1);
+    color: var(--white);
     font-family: 'Source Sans Pro', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
 
+main{
+    background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);
+}
 
 .container{
     display: grid;
@@ -22,11 +25,26 @@
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
+    background-color: var(--black-25);
     border-radius: var(--corner);
 }
     .community-header{
-        background-color: var(--black-trans);
+        padding: 16px;
+    }
 
+    .community-header-title{
+        display: flex;
+        background-color: var(--black-50);
+        padding: 16px;
+        border-radius: var(--corner);
+    }
+
+    .community-header-title-badge{
+        content: "";
+        background-image: url(/common/iconography/badges/Badge-Community.svg);
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
     }
 
     .community-header-icon{
@@ -36,6 +54,34 @@
         background-image: url(/common/img/Connect.png);
     }
 
+.community-main{
+    padding: 16px;
+}
+    .community-main-description{
+        background-color: var(--black-50);
+        border-radius: var(--corner);
+        padding: 16px;
+    }
+
+
+.community-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: var(--corner);
+}
+    .community-footer-stats{
+        background-color: var(--black-50);
+        padding: 16px;
+        border-radius: var(--corner);
+    }
+    .community-footer-join{
+        background-color: var(--black-50);
+        padding: 16px;
+        border-radius: var(--corner);
+        box-shadow: 0px 0px 0px 1px white inset;
+    }
+
 
 
 :root {
@@ -43,7 +89,8 @@
     --plus-blue: #006FFF;
     --blue: #00469F;
     --dark-blue: #021026;
-    --black-trans: #020814BF;
+    --black-25: #02081440;
+    --black-50: #020814BF;
     --black: #020814;
 
     --corner: 8px;
