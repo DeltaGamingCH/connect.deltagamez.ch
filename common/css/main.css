@@ -27,6 +27,7 @@ main{
     overflow-y: hidden;
     background-color: var(--black-25);
     border-radius: var(--corner);
+    box-shadow: 0px 0px 0px 1px var(--border-white) inset;
 }
     .community-header{
         padding: 16px;
@@ -79,13 +80,16 @@ main{
         background-color: var(--black-50);
         padding: 16px;
         border-radius: var(--corner);
-        box-shadow: 0px 0px 0px 1px white inset;
+        box-shadow: 0px 0px 0px 1px var(--border-white) inset;
     }
-
+        .community-footer-join-link{
+            
+        }
 
 
 :root {
     --white: #ECF2FD;
+    --border-white: #ECF2FDBF;
     --plus-blue: #006FFF;
     --blue: #00469F;
     --dark-blue: #021026;
