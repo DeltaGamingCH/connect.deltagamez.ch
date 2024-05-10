@@ -1,14 +1,20 @@
+@import url("/common/typography/Termina/font-termina.css");
+
 * {
     box-sizing: border-box;
     background-color: transparent;
     padding: 0px;
     margin: 0px;
     color: var(--white);
-    font-family: 'Source Sans Pro', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-family: Termina, 'Source Sans Pro', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
 
 main{
     background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);
+}
+
+.communities{
+    /*padding-inline: 64px;*/
 }
 
 .container{
@@ -17,86 +23,126 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 16px;
     grid-row-gap: 16px;
-    border-radius: var(--corner);
+    border-radius: var(--corner-radius);
     font-size: 14px;
 }
 
 .community{
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
+    overflow: hidden;
     background-color: var(--black-25);
-    border-radius: var(--corner);
+    border-radius: var(--corner-radius);
     box-shadow: 0px 0px 0px 1px var(--border-white) inset;
 }
     .community-header{
-        padding: 16px;
-    }
+        padding: 16px;}
+        .community-header-title{
+            display: flex;
+            background-color: var(--black-50);
+            padding: 16px;
+            border-radius: var(--corner-radius);
+            width: 100%;}
+            .community-header-title-title{
+                font-weight: var(--font-weight-heavy);}
+            .community-header-title-badge{
+                content: "";
+                background-image: url(/common/iconography/badges/Badge-Community.svg);
+                background-size: 32px;
+                width: 32px;
+                height: 32px;}
+        .community-header-logo{
+            padding-top: 16px;}
+            .community-header-logo-icon{
+                height: 120px;
+                width: 120px;
+                background-color: var(--black-50);
+                border-radius: var(--corner-radius);
+                background-position: 50%;
+                /*background-image: url(/common/img/Connect.png);*/}
 
-    .community-header-title{
+    .community-main{
+        padding: 16px;}
+        .community-main-description{
+            height: 144px;
+            overflow-y: hidden;
+            background-color: var(--black-50);
+            border-radius: var(--corner-radius);
+            padding: 16px;}
+
+
+    .community-footer{
         display: flex;
-        background-color: var(--black-50);
+        justify-content: space-between;
         padding: 16px;
-        border-radius: var(--corner);
+        border-radius: var(--corner-radius);
     }
-
-    .community-header-title-badge{
-        content: "";
-        background-image: url(/common/iconography/badges/Badge-Community.svg);
-        background-size: 32px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .community-header-icon{
-        height: 100%;
-        display: flex;
-        background-position: 50%;
-        background-image: url(/common/img/Connect.png);
-    }
-
-.community-main{
-    padding: 16px;
-}
-    .community-main-description{
-        background-color: var(--black-50);
-        border-radius: var(--corner);
-        padding: 16px;
-    }
-
-
-.community-footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-    border-radius: var(--corner);
-}
-    .community-footer-stats{
-        background-color: var(--black-50);
-        padding: 16px;
-        border-radius: var(--corner);
-    }
-    .community-footer-join{
-        background-color: var(--black-50);
-        padding: 16px;
-        border-radius: var(--corner);
-        box-shadow: 0px 0px 0px 1px var(--border-white) inset;
-    }
-        .community-footer-join-link{
-            
+        .community-footer-stats{
+            background-color: var(--black-50);
+            padding: 16px;
+            border-radius: var(--corner-radius);
         }
+        .community-footer-join{
+            position: relative;
+            background-color: var(--black-50);
+            padding: 16px;
+            border-radius: var(--corner-radius);
+            box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+            text-decoration: none;
+            z-index: 1;
+
+        }
+
+        .community-footer-join::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            background: linear-gradient(135deg, transparent 25%, var(--white-25) 50%, var(--white-10) 75%, transparent 75%);
+            border-radius: var(--corner-radius);
+
+            transition: transform 0.2s ease-in-out;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .community-footer-join:hover::before{
+            transform: scaleX(1);
+        }
+
 
 
 :root {
     --white: #ECF2FD;
+    --white-50: #ECF2FDBF;
+    --white-25: #ECF2FD40;
+    --white-10: #ECF2FD1A;
     --border-white: #ECF2FDBF;
     --plus-blue: #006FFF;
     --blue: #00469F;
     --dark-blue: #021026;
-    --black-25: #02081440;
     --black-50: #020814BF;
+    --black-25: #02081440;
     --black: #020814;
 
-    --corner: 8px;
-    --corner-small: 4px;
+    --corner-radius: 8px;
+    --corner-radius-small: 4px;
+
+    --font-size-big: 24px;
+    --font-size-regular: 16px;
+    --font-size-small: 14px;
+    --font-size-tiny: 12px;
+
+    --font-weight-black: 900;
+    --font-weight-heavy: 800;
+    --font-weight-bold: 700;
+    --font-weight-demi: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    --font-weight-extralight: 200;
+    --font-weight-thin: 100;
 }
