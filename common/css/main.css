@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    color: var(--white1);
+    font-family: 'Source Sans Pro', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+
+.container{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    border-radius: var(--corner);
+    font-size: 14px;
+}
+
+.community{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    border-radius: var(--corner);
+}
+    .community-header{
+        background-color: var(--black-trans);
+
+    }
+
+    .community-header-icon{
+        height: 100%;
+        display: flex;
+        background-position: 50%;
+        background-image: url(/common/img/Connect.png);
+    }
+
+
+
+:root {
+    --white: #ECF2FD;
+    --plus-blue: #006FFF;
+    --blue: #00469F;
+    --dark-blue: #021026;
+    --black-trans: #020814BF;
+    --black: #020814;
+
+    --corner: 8px;
+    --corner-small: 4px;
+}
