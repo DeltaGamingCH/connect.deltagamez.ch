@@ -90,10 +90,11 @@ main{
             box-shadow: 0px 0px 0px 1px var(--border-white) inset;
             text-decoration: none;
             z-index: 1;
-
+            overflow: hidden;
         }
 
         .community-footer-join::before{
+            opacity: 0;
             content:'';
             position: absolute;
             top: 0;
@@ -101,16 +102,16 @@ main{
             bottom: 0;
             right: 0;
             z-index: -1;
-            background: linear-gradient(135deg, transparent 25%, var(--white-25) 50%, var(--white-10) 75%, transparent 75%);
+            background: linear-gradient(120deg, transparent 25%, var(--white-25) 50%, var(--white-10) 75%, transparent 75%);
             border-radius: var(--corner-radius);
 
-            transition: transform 0.2s ease-in-out;
-            transform: scaleX(0);
-            transform-origin: left;
+            transform: translateX(-100%);
         }
 
         .community-footer-join:hover::before{
-            transform: scaleX(1);
+            opacity: 1;
+            transform: translateX(100%);
+            transition: transform 0.4s linear;
         }
 
 

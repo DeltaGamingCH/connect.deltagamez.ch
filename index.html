@@ -12,7 +12,27 @@
     <link rel="icon" type="image/x-icon" href="/common/img/ConnectTransparentB.png">
     <link rel="stylesheet" href="common/css/main.css">
 </head>
-<body>
+<body><!--
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+        let joinButton = document.querySelector('.community-footer-join');
+    
+        let allowHover = true;
+    
+        function allowHoverAfterDelay() {
+            allowHover = true;
+        }
+    
+        joinButton.addEventListener('mouseenter', function() {
+            if (allowHover) {
+                console.log("Hover true");
+                allowHover = false;
+                console.log("hover false");
+                setTimeout(allowHoverAfterDelay, 2000);
+            }
+        });
+    });
+    </script>-->
     <header>
 
     </header>
@@ -42,7 +62,6 @@
                         </div>
                         <a class="community-footer-join" href="">
                             JOIN
-                            <div class="highlight"></div>
                         </a>
                     </div>
                 </li>
