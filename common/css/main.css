@@ -101,19 +101,17 @@ main{
             left: 0;
             bottom: 0;
             right: 0;
-            z-index: -1;
             background: linear-gradient(120deg, transparent 25%, var(--white-25) 50%, var(--white-10) 75%, transparent 75%);
             border-radius: var(--corner-radius);
-
             transform: translateX(-100%);
+            z-index: -1;
         }
 
-        .community-footer-join:hover::before{
+        .community-footer-join.hover::before {
             opacity: 1;
             transform: translateX(100%);
-            transition: transform 0.4s linear;
+            transition: transform 0.5s linear;
         }
-
 
 
 :root {

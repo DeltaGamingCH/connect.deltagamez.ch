@@ -1,13 +1,34 @@
-let link = document.getElementById('custom-link');
+document.addEventListener('DOMContentLoaded', function () {
+    const joinButtons = document.querySelectorAll('.community-footer-join');
+    
+    joinButtons.forEach((joinButton) => {
+        let cooldown = false;
+        let hoverInterval;
 
-link.addEventListener('mouseover', function() {
-    link.style.color = 'red';
+        function activateEffect() {
+            if (!cooldown) {
+                joinButton.classList.add('hover');
+                cooldown = true;
+                setTimeout(() => {
+                    joinButton.classList.remove('hover');
+                    setTimeout(() => {
+                        cooldown = false;
+                        if (hoverInterval) {
+                            activateEffect();
+                        }
+                    }, 2000);
+                }, 500);
+            }
+        }
+
+        joinButton.addEventListener('mouseenter', () => {
+            hoverInterval = setInterval(activateEffect); 
+            activateEffect(); 
+        });
+
+        joinButton.addEventListener('mouseleave', () => {
+            clearInterval(hoverInterval);
+            hoverInterval = null;
+        });
+    });
 });
-
-
-link.addEventListener('mouseout', function() {
-
-    link.style.color = '';
-});
-
-console.log("loaded");
