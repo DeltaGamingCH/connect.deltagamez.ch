@@ -3,8 +3,8 @@
 * {
     box-sizing: border-box;
     background-color: transparent;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     color: var(--white);
     font-family: Termina, 'Source Sans Pro', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
@@ -67,10 +67,11 @@ main{
                 background-color: var(--black-50);
                 border-radius: var(--corner-radius);
                 background-position: 50%;
-                /*background-image: url(/common/img/Connect.png);*/}
+                background-size: contain;
+                background-image: url(/common/img/Connect.png);}
 
     .community-main{
-        padding: 16px;}
+        padding-inline: 16px;}
         .community-main-description{
             height: 144px;
             overflow-y: hidden;
@@ -86,21 +87,52 @@ main{
         border-radius: var(--corner-radius);
     }
         .community-footer-stats{
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
             background-color: var(--black-50);
             padding: 16px;
             border-radius: var(--corner-radius);
         }
         .community-footer-stats-members{
-
+            display: flex;
+            align-items: center;
+            margin-right: auto;
         }
-        .community-footer-stats-date{}
+            .community-footer-stats-members-icon{
+                content: '';
+                background-image: url(https://dgdevs.deltagamez.ch/common/svg/DG_DV_Members.svg);
+                background-size: 24px;
+                position: static;
+                width: 24px;
+                height: 24px;
+            }
+
+        .community-footer-stats-date{
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+            .community-footer-stats-date-icon{
+                display: flex;
+                content: '';
+                background-image: url(https://dgdevs.deltagamez.ch/common/svg/DG_DV_Members.svg);
+                background-size: 24px;
+                position: static;
+                width: 24px;
+                height: 24px;
+            }
 
         .community-footer-join{
             position: relative;
+            display: flex;
+            padding: 16px 24px 16px 24px;
+            align-items: center;
             background-color: var(--black-50);
-            padding: 16px;
             border-radius: var(--corner-radius);
             box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+            margin-left: 16px;
             text-decoration: none;
             z-index: 1;
             overflow: hidden;}
@@ -109,15 +141,25 @@ main{
                 content:'';
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(120deg, transparent 25%, var(--white-25) 50%, var(--white-10) 75%, transparent 75%);
+                background: linear-gradient(120deg, transparent 25%, var(--white-10) 25%, var(--white-25) 40%, var(--white-25) 50%, var(--white-25) 60%, var(--white-10) 75%, transparent 75%);
                 border-radius: var(--corner-radius);
                 transform: translateX(-100%);
                 z-index: -1;}
             .community-footer-join.hover::before{
                 opacity: 1;
                 transform: translateX(100%);
-                transition: transform 0.5s linear;}
+                transition: transform 5s linear;}
 
+
+
+/*SIZE DEFINTIONS*/
+/*
+TINY
+SMALL
+REGULAR
+BIG
+HUGE
+*/
 
 :root {
     --white: #ECF2FD;
@@ -139,6 +181,10 @@ main{
     --font-size-regular: 16px;
     --font-size-small: 14px;
     --font-size-tiny: 12px;
+
+    --spacing-regular: 16px;
+    --spacing-small: 8px;
+    --spacing-tiny: 4px;
 
     --font-weight-black: 900;
     --font-weight-heavy: 800;

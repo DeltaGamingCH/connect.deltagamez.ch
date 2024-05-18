@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             activateEffect();
                         }
                     }, 2000);
-                }, 500);
+                }, 5000);
             }
         }
 
