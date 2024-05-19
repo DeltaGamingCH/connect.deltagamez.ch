@@ -101,7 +101,7 @@ main{
         }
             .community-footer-stats-members-icon{
                 content: '';
-                background-image: url(https://dgdevs.deltagamez.ch/common/svg/DG_DV_Members.svg);
+                background-image: url(/common/iconography/badges/DG_CO_Members.svg);
                 background-size: 24px;
                 position: static;
                 width: 24px;
@@ -117,7 +117,7 @@ main{
             .community-footer-stats-date-icon{
                 display: flex;
                 content: '';
-                background-image: url(https://dgdevs.deltagamez.ch/common/svg/DG_DV_Members.svg);
+                background-image: url(/common/iconography/badges/DG_CO_Time.svg);
                 background-size: 24px;
                 position: static;
                 width: 24px;
@@ -141,14 +141,14 @@ main{
                 content:'';
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(120deg, transparent 25%, var(--white-10) 25%, var(--white-25) 40%, var(--white-25) 50%, var(--white-25) 60%, var(--white-10) 75%, transparent 75%);
+                background: linear-gradient(120deg, var(--highlight-effect));
                 border-radius: var(--corner-radius);
                 transform: translateX(-100%);
                 z-index: -1;}
             .community-footer-join.hover::before{
                 opacity: 1;
                 transform: translateX(100%);
-                transition: transform 5s linear;}
+                transition: transform 0.5s linear;}
 
 
 
@@ -195,4 +195,6 @@ HUGE
     --font-weight-light: 300;
     --font-weight-extralight: 200;
     --font-weight-thin: 100;
+
+    --highlight-effect: transparent 25%, var(--white-10) 25%, var(--white-10) 41%, var(--white-25) 41%, var(--white-25) 50%, var(--white-25) 59%, var(--white-10) 59%, var(--white-10) 75%, transparent 75%;
 }
