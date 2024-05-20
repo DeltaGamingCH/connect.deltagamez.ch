@@ -153,15 +153,16 @@ main{
 
 
     .tooltip-badge:hover::before{
-        position: absolute;
-        white-space: nowrap;
         content:'This is a tooltip';
+        position: absolute;
         top: calc(100% + var(--spacing-small));
         left: calc(0px - var(--spacing-small));
+        background-color: var(--black);
         padding: var(--spacing-small);
-        background-color: var(--black-50);
         border-radius: var(--corner-radius);
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+        color: var(--blue);
+        white-space: nowrap;
     }
 
 
