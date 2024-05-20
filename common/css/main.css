@@ -42,8 +42,6 @@ main{
     background-color: var(--black-25);
     border-radius: var(--corner-radius);
     box-shadow: 0px 0px 0px 1px var(--border-white) inset;}
-    .community{}
-
     .community-header{
         padding: 16px;}
         .community-header-title{
@@ -71,6 +69,15 @@ main{
                 background-position: 50%;
                 background-size: contain;
                 background-image: url(/common/img/Connect.png);}
+            .community-header-logo-banner{
+                height: 120px;
+                width: 100%;
+                background-color: var(--black-50);
+                border-radius: var(--corner-radius);
+                background-position: 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url(/common/img/Connect.png);}
 
     .community-main{
         padding-inline: 16px;}
@@ -85,46 +92,39 @@ main{
         display: flex;
         justify-content: space-between;
         padding: 16px;
-        border-radius: var(--corner-radius);
-    }
+        border-radius: var(--corner-radius);}
         .community-footer-stats{
             display: flex;
             justify-content: space-between;
             width: 60%;
             background-color: var(--black-50);
             padding: 16px;
-            border-radius: var(--corner-radius);
-        }
+            border-radius: var(--corner-radius);}
         .community-footer-stats-members{
             display: flex;
             align-items: center;
-            margin-right: auto;
-        }
+            margin-right: auto;}
             .community-footer-stats-members-icon{
-                content: '';
+                position: relative;
+                content: "";
                 background-image: url(/common/iconography/badges/DG_CO_Members.svg);
                 background-size: 24px;
-                position: static;
                 width: 24px;
-                height: 24px;
-            }
+                height: 24px;}
 
         .community-footer-stats-date{
             display: flex;
             align-items: center;
             margin-right: auto;
-            margin-left: auto;
-        }
+            margin-left: auto;}
             .community-footer-stats-date-icon{
+                position: relative;
                 display: flex;
                 content: '';
                 background-image: url(/common/iconography/badges/DG_CO_Time.svg);
                 background-size: 24px;
-                position: static;
                 width: 24px;
-                height: 24px;
-            }
-
+                height: 24px;}
         .community-footer-join{
             position: relative;
             display: flex;
@@ -162,8 +162,32 @@ main{
         border-radius: var(--corner-radius);
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
         color: var(--blue);
+        white-space: nowrap;}
+
+    .tooltip-members::before{
+        content:'This is a tooltip';
+        position: absolute;
+        top: calc(100% + var(--spacing-small));
+        left: calc(0px - var(--spacing-small));
+        background-color: var(--black);
+        padding: var(--spacing-small);
+        border-radius: var(--corner-radius);
+        box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+        color: var(--blue);
         white-space: nowrap;
-    }
+        z-index: 9000;}
+        
+    .tooltip-date:hover::before{
+        content:'Jan 24';
+        position: absolute;
+        top: calc(100% + var(--spacing-small));
+        left: calc(0px - var(--spacing-small));
+        background-color: var(--black);
+        padding: var(--spacing-small);
+        border-radius: var(--corner-radius);
+        box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+        color: var(--blue);
+        white-space: nowrap;}
 
 
 /*SIZE DEFINTIONS*/
