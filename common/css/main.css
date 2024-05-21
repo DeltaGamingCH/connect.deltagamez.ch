@@ -168,7 +168,7 @@ main{
         color: var(--blue);
         white-space: nowrap;}
 
-    .tooltip-members::before{
+    .tooltip-members:hover::before{
         content:'This is a tooltip';
         position: absolute;
         top: calc(0px - 100% - var(--spacing-regular) - var(--spacing-small));

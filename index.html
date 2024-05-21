@@ -94,40 +94,5 @@
             </ul>
         </section>
     </main>
-
-    <style>
-        .container2 {
-    position: relative;
-    z-index: 1; /* Ensure it’s below the ::before content */
-}
-
-/* ::before pseudo-element for the container */
-.container2::before {
-    content: 'This is a tooltip at the front of the page';
-    position: absolute; /* Absolute position relative to the body */
-    top: 10px;
-    left: 10px;
-    background-color: var(--black, black);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 0px 1px var(--border-white, white) inset;
-    color: var(--blue, blue);
-    white-space: nowrap;
-    z-index: 9999; /* High z-index to be above all other content */
-}
-
-/* Other content styles */
-.content {
-    margin: 20px;
-    padding: 20px;
-    background-color: var(--white-50, lightgray);
-}
-    </style>
-    <div class="container2">
-        <div class="content">
-            <h1>Content Header</h1>
-            <p>This is some content.</p>
-        </div>
-    </div>
 </body>
 </html>
