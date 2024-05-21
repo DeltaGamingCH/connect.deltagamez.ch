@@ -171,7 +171,7 @@ main{
     .tooltip-members:hover::before{
         content:'This is a tooltip';
         position: absolute;
-        top: calc(0px - 100% - var(--spacing-regular) - var(--spacing-small));
+        top: calc(0px - 100% - var(--spacing-regular));
         left: calc(0px - var(--spacing-small));
         background-color: var(--black);
         padding: var(--spacing-small);
@@ -183,7 +183,7 @@ main{
     .tooltip-date:hover::before{
         content:'Jan 24';
         position: absolute;
-        top: calc(0px - 100% - var(--spacing-regular) - var(--spacing-small));
+        top: calc(0px - 100% - var(--spacing-regular));
         left: calc(0px - var(--spacing-small));
         background-color: var(--black);
         padding: var(--spacing-small);
