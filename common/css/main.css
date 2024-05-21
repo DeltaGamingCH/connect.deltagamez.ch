@@ -24,6 +24,7 @@ main{
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     border-radius: var(--corner-radius);
+    padding-bottom: 128px;
     font-size: 14px;
 }
 
@@ -51,10 +52,12 @@ main{
             border-radius: var(--corner-radius);
             width: 100%;}
             .community-header-title-title{
-                font-weight: var(--font-weight-heavy);}
+                vertical-align: center;
+                font-weight: var(--font-weight-heavy);
+                text-align: center;}
             .community-header-title-badge{
                 position: relative;
-                content: "";
+                content: '';
                 background-image: url(/common/iconography/badges/Badge-Community.svg);
                 background-size: 32px;
                 width: 32px;
@@ -106,7 +109,7 @@ main{
             margin-right: auto;}
             .community-footer-stats-members-icon{
                 position: relative;
-                content: "";
+                content: '';
                 background-image: url(/common/iconography/badges/DG_CO_Members.svg);
                 background-size: 24px;
                 width: 24px;
@@ -128,12 +131,13 @@ main{
         .community-footer-join{
             position: relative;
             display: flex;
-            padding: 16px 24px 16px 24px;
+            padding: 12px 24px 12px 24px;
             align-items: center;
             background-color: var(--black-50);
             border-radius: var(--corner-radius);
             box-shadow: 0px 0px 0px 1px var(--border-white) inset;
             margin-left: 16px;
+            font-weight: var(--font-weight-bold);
             text-decoration: none;
             z-index: 1;
             overflow: hidden;}
@@ -167,20 +171,19 @@ main{
     .tooltip-members::before{
         content:'This is a tooltip';
         position: absolute;
-        top: calc(100% + var(--spacing-small));
+        top: calc(0px - 100% - var(--spacing-regular) - var(--spacing-small));
         left: calc(0px - var(--spacing-small));
         background-color: var(--black);
         padding: var(--spacing-small);
         border-radius: var(--corner-radius);
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
         color: var(--blue);
-        white-space: nowrap;
-        z-index: 9000;}
+        white-space: nowrap;}
         
     .tooltip-date:hover::before{
         content:'Jan 24';
         position: absolute;
-        top: calc(100% + var(--spacing-small));
+        top: calc(0px - 100% - var(--spacing-regular) - var(--spacing-small));
         left: calc(0px - var(--spacing-small));
         background-color: var(--black);
         padding: var(--spacing-small);
