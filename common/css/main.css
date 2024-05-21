@@ -79,7 +79,7 @@
             .community-header-title-badge{
                 position: relative;
                 content: '';
-                background-image: url(/common/iconography/badges/Badge-Community.svg);
+                background-image: url(/common/icons/badges/Badge-Community.svg);
                 background-size: 28px;
                 width: 28px;
                 height: 28px;
@@ -134,7 +134,7 @@
             .community-footer-stats-members-icon{
                 position: relative;
                 content: '';
-                background-image: url(/common/iconography/badges/DG_CO_Members.svg);
+                background-image: url(/common/icons/DG_CO_Members.svg);
                 background-size: 24px;
                 width: 24px;
                 height: 24px;}
@@ -148,7 +148,7 @@
                 position: relative;
                 display: flex;
                 content: '';
-                background-image: url(/common/iconography/badges/DG_CO_Time.svg);
+                background-image: url(/common/icons/DG_CO_Time.svg);
                 background-size: 24px;
                 width: 24px;
                 height: 24px;}
