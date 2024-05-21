@@ -52,16 +52,18 @@ main{
             border-radius: var(--corner-radius);
             width: 100%;}
             .community-header-title-title{
-                vertical-align: center;
-                font-weight: var(--font-weight-heavy);
-                text-align: center;}
+                font-size: 24px;
+                word-wrap: break-word;
+                font-weight: var(--font-weight-heavy);}
             .community-header-title-badge{
                 position: relative;
                 content: '';
                 background-image: url(/common/iconography/badges/Badge-Community.svg);
-                background-size: 32px;
-                width: 32px;
-                height: 32px;}
+                background-size: 28px;
+                width: 28px;
+                height: 28px;
+                flex-shrink: 0;
+                margin-right: 4px;}
         .community-header-logo{
             padding-top: 16px;}
             .community-header-logo-icon{
@@ -85,7 +87,7 @@ main{
     .community-main{
         padding-inline: 16px;}
         .community-main-description{
-            height: 144px;
+            min-height: 144px;
             overflow-y: hidden;
             background-color: var(--black-50);
             border-radius: var(--corner-radius);
@@ -95,7 +97,8 @@ main{
         display: flex;
         justify-content: space-between;
         padding: 16px;
-        border-radius: var(--corner-radius);}
+        border-radius: var(--corner-radius);
+        margin-top: auto;}
         .community-footer-stats{
             display: flex;
             justify-content: space-between;
@@ -157,7 +160,7 @@ main{
 
 
     .tooltip-badge:hover::before{
-        content:'This is a tooltip';
+        content:'null';
         position: absolute;
         top: calc(100% + var(--spacing-small));
         left: calc(0px - var(--spacing-small));
@@ -169,7 +172,7 @@ main{
         white-space: nowrap;}
 
     .tooltip-members:hover::before{
-        content:'This is a tooltip';
+        content:'null';
         position: absolute;
         top: calc(0px - 100% - var(--spacing-regular));
         left: calc(0px - var(--spacing-small));
@@ -181,7 +184,7 @@ main{
         white-space: nowrap;}
         
     .tooltip-date:hover::before{
-        content:'Jan 24';
+        content:'null';
         position: absolute;
         top: calc(0px - 100% - var(--spacing-regular));
         left: calc(0px - var(--spacing-small));
