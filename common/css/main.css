@@ -8,6 +8,7 @@
     color: var(--white);
     font-family: Termina, 'Source Sans Pro', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;}
 
+    body{background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);}
 .nav{
     display: flex;
     justify-content: center;
@@ -23,11 +24,8 @@
 
 .header{
     
-    background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);
-    filter: url(/common/img/Noise.png);}
-    .header::before{
-        filter: url(/common/img/Noise.png);
-    }
+    
+    filter: url(/common/img/Noise.svg);}
     .header-logo{
         display: flex;
         justify-content: center;
