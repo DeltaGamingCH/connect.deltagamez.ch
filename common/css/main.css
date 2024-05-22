@@ -40,10 +40,9 @@ body{
     .header-logo{
         display: flex;
         justify-content: center;
-        padding: 240px 0 240px 0;}
+        padding: 240px 0 160px 0;}
         .header-logo-item {
-            box-shadow: -10px -10px 15px var(--white-10),
-            10px 10px 15px var(--black-25);
+            box-shadow: -8px -8px 16px var(--white-10), 8px 8px 16px var(--black-50);
             position: relative;
             width: 240px;
             height: 240px;
@@ -59,7 +58,7 @@ body{
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-15px);
+                transform: translateY(-10px);
             }
         }
 
@@ -67,7 +66,7 @@ body{
             animation: shadowFloat 4s ease-in-out infinite;
             content: "";
             position: absolute;
-            bottom: -60px; /* Adjust to control the vertical position */
+            bottom: -64px; /* Adjust to control the vertical position */
             width: calc(100%); /* Adjust to control the width */
             height: 10px; /* Adjust to control the thickness of the shadow */
             background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
@@ -81,15 +80,19 @@ body{
                 transform: translateY(0px) scale(1, 0.5);
             }
             50% {
-                transform: translateY(15px) scale(1.2, 0.5); /* Make the shadow slightly larger at the top */
+                transform: translateY(10px) scale(1.2, 0.5); /* Make the shadow slightly larger at the top */
             }
         }
 
     .header-description{
         display: flex;
-
+        justify-content: center;
+        padding-bottom: 128px;
     }
-
+        .header-description-item{
+            font-size: var(--font-size-big);
+            font-weight: var(--font-weight-bold);
+        }
 
 .main{
     background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);}
