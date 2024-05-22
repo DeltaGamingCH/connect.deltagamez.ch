@@ -23,7 +23,8 @@
 
 .header{
     
-    background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);}
+    background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);
+    filter: url(/common/img/Noise.png);}
     .header::before{
         filter: url(/common/img/Noise.png);
     }
