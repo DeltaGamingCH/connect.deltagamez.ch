@@ -11,24 +11,46 @@
 .nav{
     display: flex;
     justify-content: center;
-    height: 96px;
+    height: 64px;
     align-items: center;}
     .nav-item{
-        font-size: var(--font-size-big);
+        font-size: var(--font-size-regular);
         text-decoration: none;
         font-weight: var(--font-weight-bold);
         padding: var(--spacing-regular);}
         .nav-item-active{
-            font-weight: var(--font-weight-black);
-        }
+            font-weight: var(--font-weight-black);}
 
 .header{
+    
     background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);}
-    .header-main{
-        
-        width: 120px;
-        height: 120px;
-        background-image: url(/common/img/Connect.png);
+    .header::before{
+        filter: url(/common/img/Noise.png);
+    }
+    .header-logo{
+        display: flex;
+        justify-content: center;
+        padding: 240px 0 240px 0;
+    }
+        .header-logo-item{
+            position: relative;
+            width: 240px;
+            height: 240px;
+            background-image: url(/common/img/Connect.png);
+            background-size: contain;
+            border-radius: var(--corner-radius);
+            box-shadow: 0px 0px 16px 8px var(--dark-blue);
+        }/* BOTTOM LINE EFFECT, BELOW LOGO
+        .header-logo-item::after{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            box-shadow: 0px 0px 1px 1px var(--dark-blue);
+            padding: 16px;
+        }*/
+    .header-description{
+        display: flex;
+
     }
 
 
@@ -94,7 +116,7 @@
                 border-radius: var(--corner-radius);
                 background-position: 50%;
                 background-size: contain;
-                background-image: url(/common/img/Connect.png);}
+                background-image: url(/common/img/Connect.png)}
             .community-header-logo-banner{
                 height: 120px;
                 width: 100%;
@@ -262,6 +284,8 @@ HUGE
     --font-weight-light: 300;
     --font-weight-extralight: 200;
     --font-weight-thin: 100;
+
+    --co-logo: /common/img/Connect.png;
 
     --highlight-effect: transparent 25%, var(--white-10) 25%, var(--white-10) 41%, var(--white-25) 41%, var(--white-25) 50%, var(--white-25) 59%, var(--white-10) 59%, var(--white-10) 75%, transparent 75%;
 }
