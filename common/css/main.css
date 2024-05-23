@@ -105,43 +105,45 @@ body{
                 justify-content: center;
                 align-items: center;
                 overflow: hidden;
-                position: relative; 
-            }
-            @keyframes moveDown {
-                0% {
-                    top: -20px;
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 1;
-                }
-                90% {
-                    opacity: 1;
-                }
-                100% {
-                    top: 100%;
-                    opacity: 0;
-                }
-            }
+                position: relative;}
             .arrow {
                 position: absolute;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                animation: moveDown 5s linear infinite;
+                width: 24px;
+                height: 24px;
+                background-image: url('/common/icons/ArrowDown.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                animation: arrow 5s infinite;
+                opacity: 0;
             }
             
-            .line1, .line2 {
-                width: 2px;
-                height: 20px;
-                background-color: rgba(0, 0, 0, 0.7);
-                margin: 2px 0;
-                transform: rotate(45deg);
+            @keyframes arrow {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                20%, 80% {
+                    opacity: 1;
+                    transform: translateY(40%);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(100%);
+                }
             }
             
-            .line2 {
-                transform: rotate(-45deg);
+            .arrow1 {
+                animation-delay: 0s;
             }
+            
+            .arrow2 {
+                animation-delay: 1s;
+            }
+            
+            .arrow3 {
+                animation-delay: 2s;
+            }
+
 
 .main{
     background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);}
