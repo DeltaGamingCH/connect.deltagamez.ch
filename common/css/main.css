@@ -32,9 +32,14 @@ body{
         font-size: var(--font-size-regular);
         text-decoration: none;
         font-weight: var(--font-weight-bold);
-        padding: var(--spacing-regular);}
+        padding: var(--spacing-regular);
+        transition: 0.5s;}
         .nav-item-active{
             font-weight: var(--font-weight-black);}
+        .nav-item:hover{
+            color: var(--white-50);
+            transition: 0.5s;
+        }
 
 .header{}
     .header-logo{
@@ -42,56 +47,40 @@ body{
         justify-content: center;
         padding: 240px 0 160px 0;}
         .header-logo-item {
-            box-shadow: -8px -8px 16px var(--white-10), 8px 8px 16px var(--black-50);
+            box-shadow: -8px -8px 16px var(--white-5), 8px 8px 16px var(--black-50);
             position: relative;
             width: 240px;
             height: 240px;
             background-image: url(/common/img/Connect.png);
             background-size: contain;
             border-radius: var(--corner-radius);
-            /*box-shadow: 0px 0px 16px 8px var(--dark-blue);*/
-            animation: float 4s ease-in-out infinite;
+            animation: logo-float 4s ease-in-out infinite;
         }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
         .header-logo-item::before {
-            animation: shadowFloat 4s ease-in-out infinite;
+            animation: logo-shadow-float 4s ease-in-out infinite;
             content: "";
             position: absolute;
-            bottom: -64px; /* Adjust to control the vertical position */
-            width: calc(100%); /* Adjust to control the width */
-            height: 10px; /* Adjust to control the thickness of the shadow */
-            background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
-            filter: blur(10px); /* Adjust the blur to create a more diffused shadow */
-            border-radius: 50%; /* Rounding the edges for a more natural shadow look */
-            z-index: 1; /* Ensure it is behind the .header-logo-item */
-        }
-
-        @keyframes shadowFloat {
-            0%, 100% {
-                transform: translateY(0px) scale(1, 0.5);
-            }
-            50% {
-                transform: translateY(10px) scale(1.2, 0.5); /* Make the shadow slightly larger at the top */
-            }
+            bottom: -64px;
+            width: calc(100%);
+            height: 8px;
+            background-color: rgba(0, 0, 0, 0.5);
+            filter: blur(8px);
+            border-radius: 50%;
+            z-index: 1;
         }
 
     .header-description{
         display: flex;
         justify-content: center;
+        text-align: center;
         padding-bottom: 128px;
     }
         .header-description-item{
             font-size: var(--font-size-big);
-            font-weight: var(--font-weight-bold);
+            font-weight: var(--font-weight-extralight);
+        }
+        .header-description-span{
+            font-weight: var(--font-weight-heavy);
         }
 
 .main{
@@ -279,6 +268,22 @@ body{
         white-space: nowrap;}
 
 
+@keyframes logo-float {
+    0%, 100%{
+        transform: translateY(0);}
+    50%{
+        transform: translateY(-8px);}
+}
+@keyframes logo-shadow-float {
+    0%, 100%{
+        transform: translateY(0px) scale(1, 0.5);}
+    50%{
+        transform: translateY(8px) scale(1.2, 0.5);}
+}
+
+
+
+
 /*SIZE DEFINTIONS*/
 /*
 TINY
@@ -294,6 +299,7 @@ HUGE
     --white-50: #ECF2FDBF;
     --white-25: #ECF2FD40;
     --white-10: #ECF2FD1A;
+    --white-5: #ECF2FD0D;
     --dark-white: #DAE6FB;
     --border-white: #ECF2FDBF;
     --plus-blue: #006FFF;
