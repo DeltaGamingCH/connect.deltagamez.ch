@@ -113,22 +113,29 @@ body{
                 background-image: url('/common/icons/ArrowDown.svg');
                 background-size: contain;
                 background-repeat: no-repeat;
-                animation: arrow 5s infinite;
+                animation: arrow 4s infinite;
                 opacity: 0;
             }
             
             @keyframes arrow {
                 0% {
                     opacity: 0;
-                    transform: translateY(-20px);
+                    transform: translateY(-10%);
                 }
-                20%, 80% {
+                25% {
                     opacity: 1;
-                    transform: translateY(40%);
+                    transform: translateY(25%);
+                }
+                50% {
+                    transform: translateY(50%);
+                }
+                75% {
+                    opacity: 1;
+                    transform: translateY(75%);
                 }
                 100% {
                     opacity: 0;
-                    transform: translateY(100%);
+                    transform: translateY(110%);
                 }
             }
             
@@ -146,7 +153,7 @@ body{
 
 
 .main{
-    background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);}
+    /*background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);*/}
 
 .communities{
     /*padding-inline: 64px;*/}
