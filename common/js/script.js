@@ -1,7 +1,7 @@
 let postBadge = "Community Post";
 
-let postsContainer = document.querySelector(".posts");
-let loadMoreButton = document.querySelector(".posts button");
+let postsContainer = document.querySelector(".container");
+let loadMoreButton = document.querySelector(".container button");
 
 let loadItems = 6;
 let page = 1;
@@ -32,6 +32,7 @@ function parseJoinDate(joinDate){ /*Splits the value "community.joinDate" to "jo
 }
 
 function loadInitialItems(){
+    console.log("ran");
     let communities = fetch("http://ec2-34-205-76-164.compute-1.amazonaws.com:3000/api/v1/servers/view/1").then(response => response.json())
     JSON.parse(localStorage.getItem("communities"));
     let out = "";
@@ -141,19 +142,4 @@ function loadData(){
     if(document.querySelectorAll(".commcard").length == communities.length) {
         loadMoreButton.style.display = "none";
     }
-    /*fadeIn(container); REMOVED FADE IN ANIMATION TEMPORARY*/
 }
-
-/* TEMPOARY REMOVED FADE IN ANIMATION
-function fadeIn(div){
-    let opacity = 0;
-    let interval = setInterval(function(){
-        if(opacity <= 1){
-            opacity = opacity + 0.1;
-            div.style.opacity = opacity;
-        } else {
-            clearInterval(interval);
-        }
-    }, 50); /*Time in miliseconds divided by 10 || 100=1s*//*
-}
-*/
