@@ -32,7 +32,7 @@ function parseJoinDate(joinDate){ /*Splits the value "community.joinDate" to "jo
 }
 
 function loadInitialItems(){
-    let communities = fetch("https://ec2-34-205-76-164.compute-1.amazonaws.com:3000/api/v1/servers/view/1").then(response => response.json())
+    let communities = fetch("http://ec2-34-205-76-164.compute-1.amazonaws.com:3000/api/v1/servers/view/1").then(response => response.json())
     JSON.parse(localStorage.getItem("communities"));
     let out = "";
     let bannerStyled = "";
