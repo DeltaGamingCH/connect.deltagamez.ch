@@ -154,17 +154,41 @@ body{
                 animation-delay: 2s;
             }
 
-
+/*
+            body{
+                }
+                body::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url('/common/textures/Noise.svg');
+                    opacity: 0.2; 
+                    pointer-events: none; 
+                    z-index: -1;}*/
 .main{
-    /*background: radial-gradient(circle, var(--blue) 0%, var(--black) 100%);*/}
+    padding-inline: 128px;
+    
+    /*background: radial-gradient(circle, var(--blue) 0%, var(--black-25) 100%);*/}
     .main-header{
-
+        position: relative;
+        padding-block: 16px 64px;
+    }.main-header::before{
+        content: '';
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, var(--white-50) 0%, var(--white-50) 25%, var(--white-50) 50%, var(--white-50) 75%, transparent 100%);
     }
-        .main-header-title{}
+        .main-header-title{
+            font-weight: var(--font-weight-black);
+        }
         .main-header-description{}
 
-.communities{
-    /*padding-inline: 64px;*/}
+.communities{}
 
 .container{
     display: grid;
