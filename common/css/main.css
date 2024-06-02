@@ -202,10 +202,16 @@ body{
 }
 
 @media only screen and (max-width: 1280px){
+    .main{
+        padding-inline: 64px;
+    }
     .container{
         grid-template-columns: 1fr 1fr;}}
 
 @media only screen and (max-width: 768px){
+    .main{
+        padding-inline: 16px;
+    }
     .container{
         grid-template-columns: 1fr;}}
 
