@@ -1,0 +1,19 @@
+{
+    "status":200,
+    "server":
+    {
+        "ServerID":"949392092663259147",
+        "ServerName":"Connect",
+        "ShortDesc":"This is the official Connect server.",
+        "MemberCount":90,
+        "ServerInvite":"https://discord.gg/h5QX3dtB6V",
+        "Premiumlevel":0,
+        "ServerIcon":null,
+        "ServerBanner":null,
+        "ServerOwner":"434864685599162368",
+        "Discoverable":true,
+        "createdAt":"2024-06-04T06:39:05.731Z",
+        "updatedAt":"2024-06-04T06:39:05.731Z"
+    },
+    "exists":true
+}
