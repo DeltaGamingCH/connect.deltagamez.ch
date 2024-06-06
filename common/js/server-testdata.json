@@ -1,19 +1,35 @@
 {
-    "status":200,
-    "server":
-    {
-        "ServerID":"949392092663259147",
-        "ServerName":"Connect",
-        "ShortDesc":"This is the official Connect server.",
-        "MemberCount":90,
-        "ServerInvite":"https://discord.gg/h5QX3dtB6V",
-        "Premiumlevel":0,
-        "ServerIcon":null,
-        "ServerBanner":null,
-        "ServerOwner":"434864685599162368",
-        "Discoverable":true,
-        "createdAt":"2024-06-04T06:39:05.731Z",
-        "updatedAt":"2024-06-04T06:39:05.731Z"
-    },
-    "exists":true
-}
+    "status": 200,
+    "servers": [
+      {
+        "ServerID": "949392092663259147",
+        "ServerName": "Connect",
+        "ShortDesc": "Hello from the Connect server.",
+        "MemberCount": 90,
+        "ServerInvite": "https://discord.gg/Rj7cpQeeWY",
+        "Premiumlevel": 0,
+        "ServerIcon": "https://cdn.discordapp.com/icons/949392092663259147/71b93237e0b6bc7b5cde58870502dc68.webp",
+        "ServerBanner": null,
+        "ServerOwner": "434864685599162368",
+        "Connect": true,
+        "PartnerShip": true,
+        "createdAt": "2024-06-04T11:31:05.131Z",
+        "updatedAt": "2024-06-04T12:50:41.815Z"
+      },
+      {
+        "ServerID": "1245067730176970792",
+        "ServerName": "Testin Bot",
+        "ShortDesc": "This is testing bot server",
+        "MemberCount": 3,
+        "ServerInvite": "https://discord.gg/EZBFAMH7sw",
+        "Premiumlevel": 0,
+        "ServerIcon": null,
+        "ServerBanner": null,
+        "ServerOwner": "434864685599162368",
+        "Connect": true,
+        "PartnerShip": false,
+        "createdAt": "2024-06-04T11:31:54.772Z",
+        "updatedAt": "2024-06-04T11:31:54.772Z"
+      }
+    ]
+  }
