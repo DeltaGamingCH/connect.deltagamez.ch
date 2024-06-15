@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const joinButtons = document.querySelectorAll('.community-footer-join');
+function highlightEffect() {
+    const highlightButtons = document.querySelectorAll('.community-footer-join, .main-header-connect');
     
-    joinButtons.forEach((joinButton) => {
+    highlightButtons.forEach((highlightButton) => {
         let cooldown = false;
         let hoverInterval;
 
         function activateEffect() {
             if (!cooldown) {
-                joinButton.classList.add('hover');
+                highlightButton.classList.add('hover');
                 cooldown = true;
                 setTimeout(() => {
-                    joinButton.classList.remove('hover');
+                    highlightButton.classList.remove('hover');
                     setTimeout(() => {
                         cooldown = false;
                         if (hoverInterval) {
@@ -21,14 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        joinButton.addEventListener('mouseenter', () => {
+        highlightButton.addEventListener('mouseenter', () => {
             hoverInterval = setInterval(activateEffect); 
             activateEffect(); 
         });
 
-        joinButton.addEventListener('mouseleave', () => {
+        highlightButton.addEventListener('mouseleave', () => {
             clearInterval(hoverInterval);
             hoverInterval = null;
         });
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', addHighlightEffect);
