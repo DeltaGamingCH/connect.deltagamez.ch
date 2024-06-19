@@ -326,6 +326,7 @@ body{
                 content: '';
                 background-image: url(/common/icons/DG_CO_Members.svg);
                 background-size: 24px;
+                margin-right: 4px;
                 width: 24px;
                 height: 24px;}
 
@@ -340,9 +341,10 @@ body{
                     width: fit-content;}
                 }
             .community-footer-stats-date-icon{
+                content: '';
                 position: relative;
                 display: flex;
-                content: '';
+                margin-right: 4px;
                 background-image: url(/common/icons/DG_CO_Time.svg);
                 background-size: 24px;
                 width: 24px;

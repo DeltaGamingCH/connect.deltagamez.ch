@@ -15,10 +15,14 @@ async function loadCommunities() {
 function displayCommunities(communities) {
     const container = document.querySelector('.container');
     for(let community of communities){
+        
+        //Date Conversion
         const createdAtDate = new Date(community.createdAt);
         const year = createdAtDate.getFullYear();
         const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(createdAtDate);
         const formattedDate = `${month}, ${year}`;
+
+        //Display Community
         const communityElement = document.createElement('li');
         communityElement.className = 'community';
         communityElement.innerHTML = `
@@ -43,7 +47,6 @@ function displayCommunities(communities) {
                     <div class="community-footer-stats-date">
                         <span class="community-footer-stats-date-icon tooltip-date"></span>
                         ${formattedDate}
-                        <!--${new Date(community.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}-->
                     </div>
                 </div>
                 <a class="community-footer-join" href="${community.ServerInvite}">
