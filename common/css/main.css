@@ -441,19 +441,16 @@ body{
     .main-header-title{font-size: 24px;}
     
     .community-header{
-        padding: var(--mobile-spacing-regular);
-    }
+        padding: var(--mobile-spacing-regular);}
         .community-header-title{
-            padding: var(--mobile-spacing-regular);
-        }
+            padding: var(--mobile-spacing-regular);}
             .community-header-title-badge{
                 background-size: 24px;
                 width: 24px;
                 height: 24px;
             }
             .community-header-title-title{
-                font-size: var(--mobile-font-size-big);
-            }
+                font-size: var(--mobile-font-size-big);}
         .community-header-logo-icon{
             height: 96px;
             width: 96px;}
