@@ -464,7 +464,7 @@ body{
             width: 96px;}
 
     .community-main{
-        padding: var(--mobile-spacing-regular);}
+        padding-inline: var(--mobile-spacing-regular);}
 
     .community-footer{
         padding: var(--mobile-spacing-regular);}
