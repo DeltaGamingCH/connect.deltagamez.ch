@@ -334,6 +334,11 @@ body{
             align-items: center;
             margin-right: auto;
             margin-left: auto;}
+            @media only screen and (min-width: 768px){
+                .community-footer-stats{
+                    justify-content: initial;
+                    width: fit-content;}
+                }
             .community-footer-stats-date-icon{
                 position: relative;
                 display: flex;

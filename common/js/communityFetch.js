@@ -15,6 +15,10 @@ async function loadCommunities() {
 function displayCommunities(communities) {
     const container = document.querySelector('.container');
     for(let community of communities){
+        const createdAtDate = new Date(community.createdAt);
+        const year = createdAtDate.getFullYear();
+        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(createdAtDate);
+        const formattedDate = `${month}, ${year}`;
         const communityElement = document.createElement('li');
         communityElement.className = 'community';
         communityElement.innerHTML = `
@@ -34,11 +38,12 @@ function displayCommunities(communities) {
                 <div class="community-footer-stats">
                     <div class="community-footer-stats-members">
                         <span class="community-footer-stats-members-icon tooltip-members"></span>
-                        ${community.MemberCount} Members
+                        ${community.MemberCount}
                     </div>
                     <div class="community-footer-stats-date">
                         <span class="community-footer-stats-date-icon tooltip-date"></span>
-                        ${new Date(community.createdAt).toLocaleDateString()}
+                        ${formattedDate}
+                        <!--${new Date(community.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}-->
                     </div>
                 </div>
                 <a class="community-footer-join" href="${community.ServerInvite}">
@@ -69,10 +74,15 @@ function setTooltipContent(communities) {
 
     tooltipDate.forEach((element, index) => {
         if (communities[index]) {
-            element.setAttribute('tooltip-date-content', new Date(communities[index].createdAt).toLocaleDateString());
+            const createdAtDate = new Date(communities[index].createdAt);
+            const formattedDate = createdAtDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                day: 'numeric',
+                month: 'long'
+            });
+            element.setAttribute('tooltip-date-content', "Joined: " + formattedDate);
         }
     });
-    
 }
 
 document.addEventListener('DOMContentLoaded', loadCommunities);
