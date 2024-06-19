@@ -343,11 +343,6 @@ body{
             line-break: auto;
             margin-right: auto;
             margin-left: auto;}
-            @media only screen and (max-width: 768px){ /*MOBILE*/
-                .community-footer-stats-date{
-                    font-size: var(--font-size-tiny);
-                }
-                }
             .community-footer-stats-date-icon{
                 content: '';
                 position: relative;
@@ -471,6 +466,8 @@ body{
 
         .community-footer-stats{
             padding: var(--mobile-spacing-regular);}
+            .community-footer-stats-date{
+                font-size: var(--font-size-tiny);}
 
         .community-footer-join{
             font-size: var(--font-size-tiny);
