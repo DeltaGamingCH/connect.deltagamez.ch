@@ -371,19 +371,20 @@ body{
 
 
     .tooltip-badge:hover::before{
-        content:'null';
+        content: attr(tooltip-badge-content);
         position: absolute;
-        top: calc(100% + var(--spacing-small));
-        left: calc(0px - var(--spacing-small));
+        top: calc(100% + var(--spacing-tiny));
+        left: calc(0px - var(--spacing-tiny));
         background-color: var(--black);
         padding: var(--spacing-small);
         border-radius: var(--corner-radius);
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+        font-size: var(--font-size-tiny);
         color: var(--blue);
         white-space: nowrap;}
 
     .tooltip-members:hover::before{
-        content:'null';
+        content: attr(tooltip-members-content);
         position: absolute;
         top: calc(0px - 100% - var(--spacing-regular));
         left: calc(0px - var(--spacing-small));
@@ -391,11 +392,12 @@ body{
         padding: var(--spacing-small);
         border-radius: var(--corner-radius);
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+        font-size: var(--font-size-tiny);
         color: var(--blue);
         white-space: nowrap;}
         
     .tooltip-date:hover::before{
-        content:'null';
+        content: attr(tooltip-date-content);
         position: absolute;
         top: calc(0px - 100% - var(--spacing-regular));
         left: calc(0px - var(--spacing-small));
@@ -403,6 +405,7 @@ body{
         padding: var(--spacing-small);
         border-radius: var(--corner-radius);
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
+        font-size: var(--font-size-tiny);
         color: var(--blue);
         white-space: nowrap;}
 

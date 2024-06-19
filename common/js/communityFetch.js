@@ -8,6 +8,7 @@ async function loadCommunities() {
     let data = await fetch('/common/js/server-testdata.json').then(response => response.json()); //http://ec2-34-205-76-164.compute-1.amazonaws.com:3000/api/v1/servers/view/1 /common/js/server-testdata.json
     console.log('Communities have successfully been loaded.')
     displayCommunities(data.servers); 
+    setTooltipContent(data.servers);
     highlightEffect();
 }
 
@@ -48,6 +49,30 @@ function displayCommunities(communities) {
     
         container.appendChild(communityElement);
     }
+}
+
+function setTooltipContent(communities) {
+    
+    const tooltipBadge = document.querySelectorAll('.tooltip-badge');
+    const tooltipMembers = document.querySelectorAll('.tooltip-members');
+    const tooltipDate = document.querySelectorAll('.tooltip-date');
+
+    tooltipBadge.forEach((element) => {
+        element.setAttribute('tooltip-badge-content', 'Verified Community');
+    });
+
+    tooltipMembers.forEach((element, index) => {
+        if (communities[index]) {
+            element.setAttribute('tooltip-members-content', communities[index].MemberCount + " Members");
+        }
+    });
+
+    tooltipDate.forEach((element, index) => {
+        if (communities[index]) {
+            element.setAttribute('tooltip-date-content', new Date(communities[index].createdAt).toLocaleDateString());
+        }
+    });
+    
 }
 
 document.addEventListener('DOMContentLoaded', loadCommunities);
