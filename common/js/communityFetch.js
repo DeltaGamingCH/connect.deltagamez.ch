@@ -83,7 +83,7 @@ function setTooltipContent(communities) {
                 day: 'numeric',
                 month: 'long'
             });
-            element.setAttribute('tooltip-date-content', "Joined: " + formattedDate);
+            element.setAttribute('tooltip-date-content', "Joined " + formattedDate);
         }
     });
 }

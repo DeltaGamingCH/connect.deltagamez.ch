@@ -242,7 +242,7 @@ body{
 
 @media only screen and (max-width: 768px){
     .main{
-        padding-inline: 16px;
+        padding-inline: 12px;
     }
     .container{
         grid-template-columns: 1fr;}}
@@ -259,7 +259,7 @@ body{
         .community-header-title{
             display: flex;
             background-color: var(--black-50);
-            padding: 16px;
+            padding: var(--spacing-regular);
             border-radius: var(--corner-radius);
             width: 100%;}
             .community-header-title-title{
@@ -313,10 +313,17 @@ body{
         .community-footer-stats{
             display: flex;
             justify-content: space-between;
-            width: 60%;
             background-color: var(--black-50);
+            width: 75%;
+            margin-right: 16px;
+            word-break: keep-all;
             padding: 16px;
             border-radius: var(--corner-radius);}
+            @media only screen and (max-width: 1280px){
+                .community-footer-stats{
+                    flex-grow: 1;
+                }
+                }
         .community-footer-stats-members{
             display: flex;
             align-items: center;
@@ -333,18 +340,19 @@ body{
         .community-footer-stats-date{
             display: flex;
             align-items: center;
+            line-break: auto;
             margin-right: auto;
             margin-left: auto;}
-            @media only screen and (min-width: 768px){
-                .community-footer-stats{
-                    justify-content: initial;
-                    width: fit-content;}
+            @media only screen and (max-width: 768px){ /*MOBILE*/
+                .community-footer-stats-date{
+                    font-size: var(--font-size-tiny);
+                }
                 }
             .community-footer-stats-date-icon{
                 content: '';
                 position: relative;
                 display: flex;
-                margin-right: 4px;
+                padding-right: 4px;
                 background-image: url(/common/icons/DG_CO_Time.svg);
                 background-size: 24px;
                 width: 24px;
@@ -354,10 +362,11 @@ body{
             display: flex;
             padding: 12px 24px 12px 24px;
             align-items: center;
+            text-align: center;
             background-color: var(--black-50);
             border-radius: var(--corner-radius);
             box-shadow: 0px 0px 0px 1px var(--border-white) inset;
-            margin-left: 16px;
+            font-size: var(--font-size-small);
             font-weight: var(--font-weight-bold);
             text-decoration: none;
             z-index: 1;
@@ -432,6 +441,47 @@ body{
 
 
 
+/*MOBILE JACK*/
+@media only screen and (max-width: 768px){
+    .main-header-title{font-size: 24px;}
+    
+    .community-header{
+        padding: var(--mobile-spacing-regular);
+    }
+        .community-header-title{
+            padding: var(--mobile-spacing-regular);
+        }
+            .community-header-title-badge{
+                background-size: 24px;
+                width: 24px;
+                height: 24px;
+            }
+            .community-header-title-title{
+                font-size: var(--mobile-font-size-big);
+            }
+        .community-header-logo-icon{
+            height: 96px;
+            width: 96px;}
+
+    .community-main{
+        padding: var(--mobile-spacing-regular);}
+
+    .community-footer{
+        padding: var(--mobile-spacing-regular);}
+
+        .community-footer-stats{
+            padding: var(--mobile-spacing-regular);}
+
+        .community-footer-join{
+            font-size: var(--font-size-tiny);
+            padding: var(--mobile-spacing-regular);}
+    }
+
+
+
+
+
+
 
 /*SIZE DEFINTIONS*/
 /*
@@ -468,12 +518,15 @@ HUGE
     --corner-radius-small: 4px;
 
     --font-size-big: 24px;
+    --mobile-font-size-big: 20px;
     --font-size-regular: 16px;
     --font-size-small: 14px;
     --font-size-tiny: 12px;
 
     --spacing-regular: 16px;
+    --mobile-spacing-regular: 12px;
     --spacing-small: 8px;
+    --mobile-spacing-small: 6px;
     --spacing-tiny: 4px;
 
     --font-weight-black: 900;
