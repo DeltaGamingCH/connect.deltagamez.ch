@@ -36,12 +36,12 @@ body{
         text-decoration: none;
         font-weight: var(--font-weight-bold);
         padding: var(--spacing-regular);
-        transition: 0.4s;}
+        transition: var(--transition-regular);}
         .nav-item-active{
             font-weight: var(--font-weight-black);}
         .nav-item:hover{
             color: var(--white-50);
-            transition: 0.4s;
+            transition: var(--transition-regular);
         }
 
 .header{}
@@ -106,12 +106,12 @@ body{
                 overflow: hidden;
                 position: relative;
                 background-color: var(--white-5);
-                transition: 0.2s;
+                transition: var(--transition-short);
                 cursor: pointer;}
                 .header-footer-scroll:hover{
                     background-color: var(--white-5);
                     box-shadow: 0 0 16px 8px var(--black-10);
-                    transition: 0.2s;}
+                    transition: var(--transition-short);}
             .arrow {
                 position: absolute;
                 width: 24px;
@@ -389,7 +389,8 @@ body{
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
         font-size: var(--font-size-tiny);
         color: var(--blue);
-        white-space: nowrap;}
+        white-space: nowrap;
+        transition: var(--transition-short);}
 
     .tooltip-members:hover::before{
         content: attr(tooltip-members-content);
@@ -402,7 +403,8 @@ body{
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
         font-size: var(--font-size-tiny);
         color: var(--blue);
-        white-space: nowrap;}
+        white-space: nowrap;
+        transition: var(--transition-short);}
         
     .tooltip-date:hover::before{
         content: attr(tooltip-date-content);
@@ -415,7 +417,8 @@ body{
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
         font-size: var(--font-size-tiny);
         color: var(--blue);
-        white-space: nowrap;}
+        white-space: nowrap;
+        transition: var(--transition-short);}
 
 
 @keyframes logo-float {
@@ -471,49 +474,42 @@ body{
         }
         .footer-brand-text{
             padding-top: var(--spacing-small);
-            font-size: var(--font-size-tiny);
-        }
+            font-size: var(--font-size-tiny);}
             .footer-brand-socials-discord{
                 height: 24px;
                 width: 24px;
                 background-image: var(--icon-discord);
                 background-size: contain;
                 background-position: 50%;
-                background-repeat: no-repeat;
-            }
+                background-repeat: no-repeat;}
             .footer-brand-socials-dg{
                 height: 24px;
                 width: 24px;
                 background-image: url(https://deltagamez.ch/common/img/DG_LogoW.png);
                 background-size: contain;
                 background-position: 50%;
-                background-repeat: no-repeat;
-            }
+                background-repeat: no-repeat;}
+
     .footer-section{
         display: flex;
         justify-content: space-evenly;
-        width: calc(100% - 128px);
-    }
+        width: calc(100% - 128px);}
         .footer-section-list{
             display: flex;
-            flex-direction: column;
-        }
+            flex-direction: column;}
             .footer-section-list-title{
                 color: var(--white);
-                font-weight: var(--font-weight-heavy);
-            }
+                font-weight: var(--font-weight-heavy);}
             .footer-section-list-item{
                 padding-top: 16px;
                 font-size: var(--font-size-small);
                 text-decoration: none;
                 color: var(--white-50);
-                transition: 0.2s;
-            }
+                transition: var(--transition-short);}
                 .footer-section-list-item:hover{
                     color: var(--white);
                     text-shadow: 0px 0px 1px var(--white);
-                    transition: 0.2s;
-                }
+                    transition: var(--transition-short);}
 
 
 
@@ -621,4 +617,8 @@ HUGE
     --icon-discord: url(/common/icons/DiscordIcon.svg);
 
     --highlight-effect: transparent 25%, var(--white-10) 25%, var(--white-10) 41%, var(--white-25) 41%, var(--white-25) 50%, var(--white-25) 59%, var(--white-10) 59%, var(--white-10) 75%, transparent 75%;
+
+    --transition-regular: 0.4s; 
+    --transition-short: 0.2s;
+
 }
