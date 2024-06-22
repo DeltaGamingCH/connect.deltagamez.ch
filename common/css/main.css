@@ -318,8 +318,7 @@ body{
             border-radius: var(--corner-radius);}
             @media only screen and (max-width: 1280px){
                 .community-footer-stats{
-                    flex-grow: 1;
-                }
+                    flex-grow: 1;}
                 }
         .community-footer-stats-members{
             display: flex;
