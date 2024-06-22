@@ -434,8 +434,9 @@ body{
 .footer{
     position: relative;
     display: flex;
-    height: 360px;
     padding-block: 64px;
+    padding-inline: 128px;
+    width: 100%;
     justify-content: center;
     background: var(--black);
     /*background: radial-gradient(circle, var(--black-10) 0%, var(--black) 100%);*/}
@@ -452,15 +453,49 @@ body{
         height: 1px;
         /*background: linear-gradient(90deg, var(--white-25) 0%, var(--white-25) 100%);*/
 }
-    .footer-brand{}
-        .footer-brand-logo{}
-        .footer-brand-socials{}
+    .footer-brand{
+        display: flex;
+        flex-direction: column;
+    }
+        .footer-brand-logo{
+            height: 36px;
+            width: 256px;
+            background-size: contain;
+            background-image: var(--co-logo-text);
+            background-repeat: no-repeat;
+        }
+        .footer-brand-socials{
+            display: flex;
+            margin-top: auto;
+            gap: 8px;
+        }
+        .footer-brand-text{
+            padding-top: var(--spacing-small);
+            font-size: var(--font-size-tiny);
+        }
+            .footer-brand-socials-discord{
+                height: 24px;
+                width: 24px;
+                background-image: var(--icon-discord);
+                background-size: contain;
+                background-position: 50%;
+                background-repeat: no-repeat;
+            }
+            .footer-brand-socials-dg{
+                height: 24px;
+                width: 24px;
+                background-image: url(https://deltagamez.ch/common/img/DG_LogoW.png);
+                background-size: contain;
+                background-position: 50%;
+                background-repeat: no-repeat;
+            }
     .footer-section{
         display: flex;
+        justify-content: space-evenly;
+        width: calc(100% - 128px);
     }
         .footer-section-list{
             display: flex;
-            padding: 16px;
             flex-direction: column;
         }
             .footer-section-list-title{
@@ -581,7 +616,9 @@ HUGE
     --font-weight-extralight: 200;
     --font-weight-thin: 100;
 
-    --co-logo: /common/img/Connect.png;
+    --co-logo: url(/common/img/Connect.png);
+    --co-logo-text: url(/common/icons/ConnectLogoText.svg);
+    --icon-discord: url(/common/icons/DiscordIcon.svg);
 
     --highlight-effect: transparent 25%, var(--white-10) 25%, var(--white-10) 41%, var(--white-25) 41%, var(--white-25) 50%, var(--white-25) 59%, var(--white-10) 59%, var(--white-10) 75%, transparent 75%;
 }
