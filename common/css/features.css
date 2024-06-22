@@ -33,29 +33,31 @@
 .features-main{
     position: relative;
     display: flex;
-    padding-inline: 128px;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
-    background: radial-gradient(circle, var(--black-50) 0%, var(--black-25) 100%);
-}
-.features-main::before{
-    content: '';
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: var(--white);
-}
+    background: radial-gradient(circle, var(--black-50) 0%, var(--black-25) 100%);}
+    .features-main::before{
+        content: '';
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: var(--white);}
 
-    .features-main-grid{
+    .features-main-connect{
+        box-shadow: 0px 0px 0px 1px var(--border-white) inset;}
+    .features-main-partnership{
+        margin-bottom: 256px;
+        border-radius: 0px 0px 8px 8px;
+        box-shadow: 0px 0px 0px 1px var(--border-white) inset;}
+
+    .grid{
         display: grid;
         margin-inline: 256px;
         background-color: var(--black-50);
-        grid-template-columns: 1fr 2fr;
-        border-radius: 0px 0px 8px 8px;
-        margin-bottom: 256px;
-        box-shadow: 0px 0px 0px 1px var(--white) inset;}
+        grid-template-columns: 1fr 2fr;}
         .grid-info{
+            position: relative;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -64,50 +66,48 @@
                 height: 120px;
                 background-image: url(/common/img/ConnectTransparentB.png);
                 background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .grid-info-title{font-weight: var(--font-weight-bold);
-            }
+                background-repeat: no-repeat;}
+            .grid-info-title{
+                font-weight: var(--font-weight-bold);
+                padding-block: var(--spacing-small);}
             .grid-info-description{
                 font-size: var(--font-size-tiny);
                 color: var(--white-50);}
-        
         .grid-center{
             display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
+            grid-template-columns: 1fr 1fr;}
             .grid-center-item{
                 padding: 16px;
-                box-shadow: 1px 0px 0px 0px var(--border-white) inset;
-            }
+                box-shadow: 1px 0px 0px 0px var(--border-white) inset;}
                 .grid-center-item-thumbnail{
                     height: 120px;
                     background-image: url(/common/img/ConnectTransparentB.png);
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: 50%;
-                    overflow: hidden;
-                }
+                    overflow: hidden;}
                 .grid-center-item-title{
                     font-weight: var(--font-weight-bold);
-                }
+                    padding-block: var(--spacing-small);}
                 .grid-center-item-description{
                     font-size: var(--font-size-tiny);
-                    color: var(--white-50)
-                }
-
+                    color: var(--white-50);}
             .grid-center-itemlong{
                 padding: 16px;
                 height: auto;
-                grid-column: span 2;
-            }
+                grid-column: span 2;}
 
             .border-top{
-                box-shadow: 0px 1px 0 0 var(--border-white) inset;
-            }
+                box-shadow: 0px 1px 0 0 var(--border-white) inset;}
             .border-top-left{
-                box-shadow: 1px 1px 0 0 var(--border-white) inset;
-            }
+                box-shadow: 1px 1px 0 0 var(--border-white) inset;}
+
+        .thumbnail-connect-module{
+            background-image: url(/common/icons/badges/Badge-Community.svg);
+        }
+        .thumbnail-partnerships-module{
+            background-image: url(/common/icons/DG_CO_Members.svg);
+        }
 
         /*
         .grid-item-small{
