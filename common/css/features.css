@@ -141,6 +141,13 @@
             background-image: var(--feature-partnership-requirements);
         }
 
+        .command-description{
+            background-color: var(--black);
+            padding: 4px;
+            border-radius: var(--corner-radius-small);
+            box-shadow: 0px 0px 0px 1px var(--white-25) inset;
+        }
+
         /*
         .grid-item-small{
             display: flex;
