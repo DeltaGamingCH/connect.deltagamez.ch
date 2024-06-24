@@ -87,25 +87,34 @@
             display: grid;
             grid-template-columns: 1fr 1fr;}
             .grid-center-item{
-                padding: 16px;
                 box-shadow: 1px 0px 0px 0px var(--border-white) inset;}
                 .grid-center-item-thumbnail{
-                    height: 120px;
+                    margin-top: 2px;
+                    height: 200px;
                     background-image: url(/common/img/ConnectTransparentB.png);
                     background-repeat: no-repeat;
-                    background-size: cover;
+                    background-size: contain;
                     background-position: 50%;
                     overflow: hidden;}
                 .grid-center-item-title{
+                    padding-inline: 16px;
                     font-weight: var(--font-weight-bold);
                     padding-block: var(--spacing-small);}
                 .grid-center-item-description{
+                    padding: 0px 16px 16px 16px;
                     font-size: var(--font-size-tiny);
                     color: var(--white-50);}
             .grid-center-itemlong{
-                padding: 16px;
                 height: auto;
                 grid-column: span 2;}
+                .grid-center-itemlong-thumbnail{
+                    height: 200px;
+                    background-image: url(/common/img/ConnectTransparentB.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: 0%;
+                    overflow: hidden;}
+
 
             .border-top{
                 box-shadow: 0px 1px 0 0 var(--border-white) inset;}
@@ -117,6 +126,19 @@
         }
         .thumbnail-partnerships-module{
             background-image: url(/common/icons/DG_CO_Members.svg);
+        }
+
+        .thumbnail-connect-1{
+            background-image: var(--feature-connect-management);
+        }
+        .thumbnail-connect-2{
+            background-image: var(--feature-connect-management);
+        }
+        .thumbnail-connect-3{
+            background-image: var(--feature-connect-setup);
+        }
+        .thumbnail-partnership-requirements{
+            background-image: var(--feature-partnership-requirements);
         }
 
         /*
@@ -168,3 +190,9 @@
                 font-size: var(--font-size-tiny);
             }
             */
+
+:root{
+    --feature-connect-management: url(/common/img/IllustrationConnect.png);
+    --feature-connect-setup: url(/common/img/IllustrationConnectSetup.png);
+    --feature-partnership-requirements: url(/common/img/IllustrationPartnership.png);
+}
