@@ -149,7 +149,7 @@
         }
 
         .thumbnail-connect-1{
-            background-image: var(--feature-connect-management);
+            background-image: var(--feature-connect-advertise);
         }
         .thumbnail-connect-2{
             background-image: var(--feature-connect-management);
@@ -219,6 +219,7 @@
             */
 
 :root{
+    --feature-connect-advertise: url(/common/img/ConnectTransparentB.png);
     --feature-connect-management: url(/common/img/IllustrationConnect.png);
     --feature-connect-setup: url(/common/img/IllustrationConnectSetup.png);
     --feature-partnership-requirements: url(/common/img/IllustrationPartnership.png);
