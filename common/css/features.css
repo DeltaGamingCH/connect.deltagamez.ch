@@ -157,8 +157,11 @@
         .thumbnail-connect-3{
             background-image: var(--feature-connect-setup);
         }
-        .thumbnail-partnership-requirements{
+        .thumbnail-partnership-1{
             background-image: var(--feature-partnership-requirements);
+        }
+        .thumbnail-partnership-2{
+            background-image: var(--feature-partnership-staff);
         }
 
         .command-description{
@@ -219,8 +222,9 @@
             */
 
 :root{
-    --feature-connect-advertise: url(/common/img/ConnectTransparentB.png);
+    --feature-connect-advertise: url(/common/img/IllustrationConnectAdvertise.png);
     --feature-connect-management: url(/common/img/IllustrationConnect.png);
     --feature-connect-setup: url(/common/img/IllustrationConnectSetup.png);
-    --feature-partnership-requirements: url(/common/img/IllustrationPartnership.png);
+    --feature-partnership-requirements: url(/common/img/IllustrationPartnershipRequirements.png);
+    --feature-partnership-staff: url(/common/img/IllustrationPartnershipStaff.png);
 }
