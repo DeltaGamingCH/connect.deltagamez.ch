@@ -33,4 +33,4 @@ function highlightEffect() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', addHighlightEffect);
+document.addEventListener('DOMContentLoaded', highlightEffect);

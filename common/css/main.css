@@ -53,7 +53,7 @@ body{
         font-size: var(--font-size-regular);
         text-decoration: none;
         font-weight: var(--font-weight-bold);
-        padding: var(--spacing-regular);
+        padding: 12px 24px 12px 24px;
         transition: var(--transition-regular);
         z-index: 1;
         overflow: hidden;
@@ -479,6 +479,7 @@ body{
         width: 100%;
         background: linear-gradient(90deg, var(--white-25) 0%, var(--white-25) 100%);}
     .footer-brand{
+        padding-right: 32px;
         display: flex;
         flex-direction: column;}
         .footer-brand-logo{
@@ -520,11 +521,10 @@ body{
         background: var(--viewport-mobile);}
         @media only screen and (max-width: 768px){
         .footer-section{
-            gap: 32px;
             padding-top: 32px;
             flex-wrap: wrap;}}
         .footer-section-list{
-            padding-right: 16px;
+            padding: 0px 32px 32px 0px;
             display: flex;
             flex-direction: column;}
             .footer-section-list-title{
@@ -631,6 +631,8 @@ HUGE
     --font-size-small: 14px;
     --font-size-tiny: 12px;
 
+    --spacing-large: 64px;
+    --spacing-big: 32px;
     --spacing-regular: 16px;
     --mobile-spacing-regular: 12px;
     --spacing-small: 8px;
