@@ -44,21 +44,19 @@ body{
             transition: var(--transition-regular);}
     .nav-item-button{
         position: relative;
-        display: inline-flex;
-        padding: 12px 24px 12px 24px;
-        align-items: center;
+        margin-left: 16px;
         background-color: var(--black-50);
         border-radius: var(--corner-radius);
         box-shadow: 0px 0px 0px 1px var(--border-white) inset;
         font-weight: var(--font-weight-bold);
         text-decoration: none;
-        z-index: 1;
-        overflow: hidden;
         font-size: var(--font-size-regular);
         text-decoration: none;
         font-weight: var(--font-weight-bold);
         padding: var(--spacing-regular);
         transition: var(--transition-regular);
+        z-index: 1;
+        overflow: hidden;
     }
         .nav-item-button::before{
             opacity: 0;
@@ -469,35 +467,27 @@ body{
     justify-content: center;
     background: var(--black-25);
     background: radial-gradient(circle, var(--black-10) 0%, var(--black) 100%);}
-    @media only screen and (max-width: 768px){
-        .footer{height: auto;}
-        .footer-section{flex-wrap: wrap;}
-        .footer-section-list{min-width: 50%;}
-    }
     .footer::before{
         content: '';
-        top: 0;
         position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.1px;
         width: 100%;
-        height: calc(1.1px);
-        background: linear-gradient(90deg, var(--white-25) 0%, var(--white-25) 100%);
-}
+        background: linear-gradient(90deg, var(--white-25) 0%, var(--white-25) 100%);}
     .footer-brand{
         display: flex;
-        flex-direction: column;
-    }
+        flex-direction: column;}
         .footer-brand-logo{
             height: 36px;
             width: 256px;
             background-size: contain;
             background-image: var(--co-logo-text);
-            background-repeat: no-repeat;
-        }
+            background-repeat: no-repeat;}
         .footer-brand-socials{
             display: flex;
             margin-top: auto;
-            gap: 8px;
-        }
+            gap: 8px;}
         .footer-brand-text{
             padding-top: var(--spacing-small);
             font-size: var(--font-size-tiny);}
@@ -515,7 +505,6 @@ body{
                 background-size: contain;
                 background-position: 50%;
                 background-repeat: no-repeat;}
-
     .footer-section{
         display: flex;
         justify-content: space-evenly;
@@ -537,6 +526,11 @@ body{
                     color: var(--white);
                     text-shadow: 0px 0px 1px var(--white);
                     transition: var(--transition-short);}
+                    
+                @media only screen and (max-width: 768px){
+                    .footer{flex-direction: column;}
+                    .footer-section-list{/*min-width: 50%;*/}
+                }
 
 
 
