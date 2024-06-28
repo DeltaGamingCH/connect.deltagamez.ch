@@ -1,5 +1,5 @@
 function highlightEffect() {
-    const highlightButtons = document.querySelectorAll('.community-footer-join, .main-header-connect');
+    const highlightButtons = document.querySelectorAll('.community-footer-join, .nav-item-button, .main-header-getstarted, .features-main-getstarted-button-item');
     
     highlightButtons.forEach((highlightButton) => {
         let cooldown = false;
