@@ -467,6 +467,9 @@ body{
     justify-content: center;
     background: var(--black-25);
     background: radial-gradient(circle, var(--black-10) 0%, var(--black) 100%);}
+    @media only screen and (max-width: 768px){
+        .footer{
+            padding-inline: 32px;}}
     .footer::before{
         content: '';
         position: absolute;
@@ -484,13 +487,19 @@ body{
             background-size: contain;
             background-image: var(--co-logo-text);
             background-repeat: no-repeat;}
+            @media only screen and (max-width: 768px){
+                .footer-brand-logo{
+                    height: 24px;}}
         .footer-brand-socials{
             display: flex;
             margin-top: auto;
             gap: 8px;}
         .footer-brand-text{
-            padding-top: var(--spacing-small);
+            padding-block: var(--spacing-small) var(--spacing-regular);
             font-size: var(--font-size-tiny);}
+            @media only screen and (max-width: 768px){
+                .footer-brand-text{
+                    font-size: 10px;}}
             .footer-brand-socials-discord{
                 height: 24px;
                 width: 24px;
@@ -507,17 +516,22 @@ body{
                 background-repeat: no-repeat;}
     .footer-section{
         display: flex;
-        justify-content: space-evenly;
-        width: calc(100% - 128px);}
+        width: 100%;
+        background: var(--viewport-mobile);}
+        @media only screen and (max-width: 768px){
+        .footer-section{
+            gap: 32px;
+            padding-top: 32px;
+            flex-wrap: wrap;}}
         .footer-section-list{
-            padding-inline: 16px;
+            padding-right: 16px;
             display: flex;
             flex-direction: column;}
             .footer-section-list-title{
                 color: var(--white);
                 font-weight: var(--font-weight-heavy);}
             .footer-section-list-item{
-                padding-top: 16px;
+                padding-top: 12px;
                 font-size: var(--font-size-small);
                 text-decoration: none;
                 color: var(--white-50);
@@ -529,7 +543,7 @@ body{
                     
                 @media only screen and (max-width: 768px){
                     .footer{flex-direction: column;}
-                    .footer-section-list{/*min-width: 50%;*/}
+                    .footer-section-list{}
                 }
 
 
@@ -641,5 +655,4 @@ HUGE
 
     --transition-regular: 0.4s; 
     --transition-short: 0.2s;
-
 }

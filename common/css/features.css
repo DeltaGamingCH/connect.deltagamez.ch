@@ -105,8 +105,13 @@
         .grid-center{
             display: grid;
             grid-template-columns: 1fr 1fr;}
+            @media only screen and (max-width: 768px){
+                .grid-center{
+                    display: grid;
+                    grid-template-columns: 1fr;}}
             .grid-center-item{
-                box-shadow: 1px 0px 0px 0px var(--border-white) inset;}
+                box-shadow: 1px 0px 0px 0px var(--border-white) inset; 
+                grid-column: span 2;}
                 .grid-center-item-thumbnail{
                     margin-top: 2px;
                     height: 200px;
