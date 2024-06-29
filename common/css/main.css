@@ -439,6 +439,9 @@ body{
         padding-right: 32px;
         display: flex;
         flex-direction: column;}
+        @media only screen and (max-width: 500px){
+            .footer-brand{padding-right: 0px;}
+        }
         .footer-brand-logo{
             height: 36px;
             width: 256px;
@@ -447,7 +450,8 @@ body{
             background-repeat: no-repeat;}
             @media only screen and (max-width: 768px){
                 .footer-brand-logo{
-                    height: 24px;}}
+                    height: 24px;
+                    width: initial;}}
         .footer-brand-socials{
             display: flex;
             margin-top: auto;
@@ -477,9 +481,9 @@ body{
         width: 100%;
         background: var(--viewport-mobile);}
         @media only screen and (max-width: 768px){
-        .footer-section{
-            padding-top: 32px;
-            flex-wrap: wrap;}}
+            .footer-section{
+                padding-top: 32px;
+                flex-wrap: wrap;}}
         .footer-section-list{
             padding: 0px 32px 32px 0px;
             display: flex;
@@ -499,8 +503,8 @@ body{
                     transition: var(--transition-short);}
                     
                 @media only screen and (max-width: 768px){
-                    .footer{flex-direction: column;}
-                }
+                    .footer{
+                        flex-direction: column;}}
 
 
 /*MOBILE*/
