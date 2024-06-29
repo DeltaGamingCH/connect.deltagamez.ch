@@ -162,9 +162,12 @@
             background-image: var(--feature-connect-setup);
         }
         .thumbnail-partnership-1{
-            background-image: var(--feature-partnership-requirements);
+            background-image: var(--feature-partnership-request);
         }
         .thumbnail-partnership-2{
+            background-image: var(--feature-partnership-requirements);
+        }
+        .thumbnail-partnership-3{
             background-image: var(--feature-partnership-staff);
         }
 
