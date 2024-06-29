@@ -1,0 +1,40 @@
+.arrow{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url('/common/icons/ArrowDown.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: arrow 3s infinite;
+    opacity: 0;}
+    
+    .arrow1{
+        animation-delay: 0s;
+    }
+    
+    .arrow2{
+        animation-delay: 1s;
+    }
+    
+    .arrow3{
+        animation-delay: 2s;
+    }
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        transform: translateY(calc(0% - 4px));
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(calc(33% - 4px));
+    }
+    66% {
+        opacity: 1;
+        transform: translateY(calc(66% - 4px));
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(calc(100% - 4px));
+    }
+}
