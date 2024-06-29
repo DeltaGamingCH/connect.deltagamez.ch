@@ -57,6 +57,7 @@
         grid-template-columns: 1fr 2fr;}
         @media only screen and (max-width: 1280px){
             .grid{
+                grid-template-columns: 1fr;
                 margin-inline: 16px;}}
         @media only screen and (max-width: 500px){
             .grid{
@@ -152,22 +153,22 @@
             background-image: url(/common/icons/DG_CO_Members.svg);
         }
 
-        .thumbnail-connect-1{
+        .thumbnail-connect-advertise{
             background-image: var(--feature-connect-advertise);
         }
-        .thumbnail-connect-2{
+        .thumbnail-connect-management{
             background-image: var(--feature-connect-management);
         }
-        .thumbnail-connect-3{
+        .thumbnail-connect-setup{
             background-image: var(--feature-connect-setup);
         }
-        .thumbnail-partnership-1{
+        .thumbnail-partnership-request{
             background-image: var(--feature-partnership-request);
         }
-        .thumbnail-partnership-2{
+        .thumbnail-partnership-requirements{
             background-image: var(--feature-partnership-requirements);
         }
-        .thumbnail-partnership-3{
+        .thumbnail-partnership-staff{
             background-image: var(--feature-partnership-staff);
         }
 
