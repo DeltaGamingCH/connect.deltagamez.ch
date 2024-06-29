@@ -28,6 +28,7 @@ body{
 
 .nav{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     height: 64px;
     align-items: center;}
@@ -56,8 +57,7 @@ body{
         padding: 12px 24px 12px 24px;
         transition: var(--transition-regular);
         z-index: 1;
-        overflow: hidden;
-    }
+        overflow: hidden;}
         .nav-item-button::before{
             opacity: 0;
             content:'';
@@ -342,8 +342,8 @@ body{
             font-size: var(--font-size-small);
             font-weight: var(--font-weight-bold);
             text-decoration: none;
-            z-index: 1;
-            overflow: hidden;}
+            overflow: hidden;
+            z-index: 1;}
             .community-footer-join::before{
                 opacity: 0;
                 content:'';
@@ -514,25 +514,20 @@ body{
             .community-header-title-badge{
                 background-size: 24px;
                 width: 24px;
-                height: 24px;
-            }
+                height: 24px;}
             .community-header-title-title{
                 font-size: var(--mobile-font-size-big);}
         .community-header-logo-icon{
             height: 96px;
             width: 96px;}
-
     .community-main{
         padding-inline: var(--spacing-regular);}
-
     .community-footer{
         padding: var(--spacing-regular);}
-
         .community-footer-stats{
             padding: var(--spacing-regular);}
             .community-footer-stats-date{
                 font-size: var(--font-size-tiny);}
-
         .community-footer-join{
             font-size: var(--font-size-tiny);
             padding: var(--spacing-regular);}
@@ -542,7 +537,12 @@ body{
 
 
 
-
+/*VIEWPORT SIZES*/
+/*
+MOBILE: max-width: 500px, 
+TABLET-SMALL: max-width: 768px,
+TABLET: max-width: 1280px, 
+*/
 
 /*SIZE DEFINTIONS*/
 /*
