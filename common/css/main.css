@@ -37,9 +37,11 @@ body{
         text-decoration: none;
         font-weight: var(--font-weight-bold);
         padding: var(--spacing-regular);
-        transition: var(--transition-regular);}
+        transition: var(--transition-regular);
+        color: var(--white-75);}
         .nav-item-active{
-            font-weight: var(--font-weight-black);}
+            font-weight: var(--font-weight-black);
+            color: var(--white);}
         .nav-item:hover{
             color: var(--white-50);
             transition: var(--transition-regular);}
@@ -167,7 +169,7 @@ body{
         position: absolute;
         width: 100%;
         height: 1.1px;
-        background: linear-gradient(90deg, var(--white-50) 0%, var(--white-50) 25%, var(--white-50) 50%, var(--white-50) 75%, transparent 100%);}
+        background: linear-gradient(90deg, var(--white-75) 0%, var(--white-75) 25%, var(--white-75) 50%, var(--white-75) 75%, transparent 100%);}
         .main-header-title{
             font-weight: var(--font-weight-black);
             font-size: 36px;}
@@ -494,7 +496,7 @@ body{
                 padding-top: 12px;
                 font-size: var(--font-size-small);
                 text-decoration: none;
-                color: var(--white-50);
+                color: var(--white-75);
                 transition: var(--transition-short);}
                 .footer-section-list-item:hover{
                     color: var(--white);
@@ -559,7 +561,8 @@ TINY
 /*Colors with numbers in variables*/
 :root {
     --white: #ECF2FD;
-    --white-50: #ECF2FDBF;
+    --white-75: #ECF2FDBF;
+    --white-50: #ECF2FD80;
     --white-25: #ECF2FD40;
     --white-10: #ECF2FD1A;
     --white-5: #ECF2FD0D;
