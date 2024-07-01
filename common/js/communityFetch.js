@@ -40,12 +40,12 @@ function displayCommunities(communities) {
             </div>
             <div class="community-footer">
                 <div class="community-footer-stats">
-                    <div class="community-footer-stats-members">
-                        <span class="community-footer-stats-members-icon tooltip-members"></span>
+                    <div class="community-footer-stats-members tooltip-members">
+                        <span class="community-footer-stats-members-icon"></span>
                         ${community.MemberCount}
                     </div>
-                    <div class="community-footer-stats-date">
-                        <span class="community-footer-stats-date-icon tooltip-date"></span>
+                    <div class="community-footer-stats-date tooltip-date">
+                        <span class="community-footer-stats-date-icon"></span>
                         ${formattedDate}
                     </div>
                 </div>
