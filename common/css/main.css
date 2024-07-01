@@ -236,6 +236,7 @@ body{
     .community-header{
         padding: 16px;}
         .community-header-title{
+            position: relative;
             display: flex;
             background-color: var(--black-50);
             padding: var(--spacing-regular);
@@ -246,7 +247,6 @@ body{
                 word-wrap: break-word;
                 font-weight: var(--font-weight-heavy);}
             .community-header-title-badge{
-                position: relative;
                 content: '';
                 background-image: url(/common/icons/badges/Badge-Community.svg);
                 background-size: 28px;

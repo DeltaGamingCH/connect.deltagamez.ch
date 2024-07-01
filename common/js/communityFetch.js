@@ -27,8 +27,8 @@ function displayCommunities(communities) {
         communityElement.className = 'community';
         communityElement.innerHTML = `
             <div class="community-header">
-                <div class="community-header-title">
-                    <span class="community-header-title-badge tooltip-badge"></span>
+                <div class="community-header-title tooltip-badge">
+                    <span class="community-header-title-badge"></span>
                     <h2 class="community-header-title-title">${community.ServerName}</h2>
                 </div>
                 <div class="community-header-logo">
