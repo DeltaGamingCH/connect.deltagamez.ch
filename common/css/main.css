@@ -236,6 +236,7 @@ body{
     .community-header{
         padding: 16px;}
         .community-header-title{
+            position: relative;
             display: flex;
             background-color: var(--black-50);
             padding: var(--spacing-regular);
@@ -246,7 +247,6 @@ body{
                 word-wrap: break-word;
                 font-weight: var(--font-weight-heavy);}
             .community-header-title-badge{
-                position: relative;
                 content: '';
                 background-image: url(/common/icons/badges/Badge-Community.svg);
                 background-size: 28px;
@@ -303,12 +303,12 @@ body{
                     flex-grow: 1;}
                 }
         .community-footer-stats-members{
+            position: relative;
+            content: '';
             display: flex;
             align-items: center;
             margin-right: auto;}
             .community-footer-stats-members-icon{
-                position: relative;
-                content: '';
                 background-image: url(/common/icons/DG_CO_Members.svg);
                 background-size: 24px;
                 margin-right: 4px;
@@ -317,13 +317,12 @@ body{
 
         .community-footer-stats-date{
             display: flex;
+            position: relative;
             align-items: center;
             line-break: auto;
             margin-right: auto;
             margin-left: auto;}
             .community-footer-stats-date-icon{
-                content: '';
-                position: relative;
                 display: flex;
                 padding-right: 4px;
                 background-image: url(/common/icons/DG_CO_Time.svg);
@@ -348,8 +347,8 @@ body{
                 opacity: 0;
                 content:'';
                 position: absolute;
-                inset: 0;
                 background: linear-gradient(120deg, var(--highlight-effect));
+                inset: 0;
                 border-radius: var(--corner-radius);
                 transform: translateX(-100%);
                 z-index: -1;}

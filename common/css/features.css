@@ -35,22 +35,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: radial-gradient(circle, var(--black-50) 0%, var(--black-25) 100%);}
-    .features-main::before{
+    /*background: radial-gradient(circle, var(--black-50) 0%, var(--black-25) 100%);*/}
+    /*.features-main::before{
         content: '';
         top: 0;
         position: absolute;
         width: 100%;
         height: 1px;
-        background: var(--white);}
-
+        background: var(--border-white);}
+*/
     .features-main-connect{
-        box-shadow: 0px 0px 0px 1px var(--border-white) inset;}
+        }
     .features-main-partnership{
         border-radius: 0px 0px 8px 8px;
-        box-shadow: 0px 0px 0px 1px var(--border-white) inset;}
+        }
 
     .grid{
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: 0px 0px 0px 1px var(--border-white) inset;
         display: grid;
         margin-inline: 256px;
         background-color: var(--black-50);
@@ -68,9 +70,9 @@
             flex-direction: column;
             overflow: hidden;
             padding: 16px;}
-            @media only screen and (max-width: 768px){
-                .grid-info{box-shadow: 0px 0px 0px 1px var(--border-white) inset;}
-            }
+            /*@media only screen and (max-width: 768px){
+                .grid-info{box-shadow: 0px -1px 0px 1px var(--border-white) inset;}
+            }*/
             .grid-info-thumbnail{
                 height: 120px;
                 background-image: url(/common/img/ConnectTransparentB.png);
@@ -105,12 +107,8 @@
         .grid-center{
             display: grid;
             grid-template-columns: 1fr 1fr;}
-            @media only screen and (max-width: 500px){
-            /*.grid-center{
-                grid-template-columns: 1fr;}*/
-            }
             .grid-center-item{
-                box-shadow: 1px 0px 0px 0px var(--border-white) inset;}
+            }                
                 @media only screen and (max-width: 768px){
                     .grid-center-item{grid-column: span 2;}
                 }
@@ -141,37 +139,8 @@
                     background-position: 0%;
                     overflow: hidden;}
 
-        .border-top{
-            box-shadow: 0px 1px 0 0 var(--border-white) inset;}
-        .border-top-left{
-            box-shadow: 1px 1px 0 0 var(--border-white) inset;}
 
-        .thumbnail-connect-module{
-            background-image: url(/common/icons/badges/Badge-Community.svg);
-        }
-        .thumbnail-partnerships-module{
-            background-image: url(/common/icons/DG_CO_Members.svg);
-        }
-
-        .thumbnail-connect-advertise{
-            background-image: var(--feature-connect-advertise);
-        }
-        .thumbnail-connect-management{
-            background-image: var(--feature-connect-management);
-        }
-        .thumbnail-connect-setup{
-            background-image: var(--feature-connect-setup);
-        }
-        .thumbnail-partnership-request{
-            background-image: var(--feature-partnership-request);
-        }
-        .thumbnail-partnership-requirements{
-            background-image: var(--feature-partnership-requirements);
-        }
-        .thumbnail-partnership-staff{
-            background-image: var(--feature-partnership-staff);
-        }
-
+        
         .command-description{
             background-color: var(--black);
             padding: 4px;
@@ -219,61 +188,52 @@
                     transform: translateX(100%);
                     transition: transform 0.5s linear;}
 
+        .border-regular{box-shadow: 1px 1px 0px 0px var(--border-white) inset;}
+        .border-module{box-shadow: 0px 1px 0px 0px var(--border-white) inset;}
+        .border-st{box-shadow: 1px 0px 0px 0px var(--border-white) inset;}
+        .border-nd{box-shadow: 1px 0px 0px 0px var(--border-white) inset;}
+        .border-rd{box-shadow: 1px 1px 0px 0px var(--border-white) inset;}
+            @media only screen and (max-width: 1280px){
+                .border-st{box-shadow: 0px 1px 0px 0px var(--border-white) inset;}
+                .border-nd{box-shadow: 1px 1px 0px 0px var(--border-white) inset;}
+                .border-rd{box-shadow: 0px 1px 0px 0px var(--border-white) inset;}
+                .border-regular{box-shadow: 1px 1px 0px 0px var(--border-white) inset;}}
+            @media only screen and (max-width: 768px){
+                .border-st{box-shadow: 0px 1px 0px 0px var(--border-white) inset;}
+                .border-nd{box-shadow: 0px 1px 0px 0px var(--border-white) inset;}
+                .border-regular{box-shadow: 0px 1px 0px 0px var(--border-white) inset;}}
 
-        /*
-        .grid-item-small{
-            display: flex;
-            flex: 1 / 3;
-            flex-direction: column;
-            overflow: hidden;
-            background-color: var(--black-25);
-            border-radius: var(--corner-radius);
-            box-shadow: 0px 0px 0px 1px var(--border-white) inset;}
-            .grid-item-small-thumbnail{
-                width: 100%;
-                height: 96px;
-                background-image: url(/common/icons/ConnectLogoText.svg);
-                background-position: 50%;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .grid-item-small-title{
-                font-weight: var(--font-weight-bold);
-                padding: 16px 16px 0px 16px;
-            }
-            .grid-item-small-description{
-                padding: 16px;
-                font-size: var(--font-size-tiny);
-            }
-        .grid-item-medium{
-            display: flex;
-            flex: 1 / 2;
-            flex-direction: column;
-            overflow: hidden;
-            background-color: var(--black-25);
-            border-radius: var(--corner-radius);
-            box-shadow: 0px 0px 0px 1px var(--border-white) inset;
-        }
-            .grid-item-medium-thumbnail{
-                width: 100%;
-                height: 128px;
-                background-image: url(/common/icons/ConnectLogoText.svg);
-                background-position: 50%;
-                background-size: contain;
-                background-repeat: no-repeat;}
-            .grid-item-medium-title{
-                font-weight: var(--font-weight-bold);
-                padding: 16px 16px 0px 16px;}
-            .grid-item-medium-description{
-                padding: 16px;
-                font-size: var(--font-size-tiny);
-            }
-            */
+        .thumbnail-connect-module{
+            background-image: url(/common/icons/badges/Badge-Community.svg);}
+        .thumbnail-partnerships-module{
+            background-image: url(/common/icons/DG_CO_Members.svg);}
+
+        .thumbnail-connect-advertise{
+            background-image: var(--feature-connect-advertise);}
+        .thumbnail-connect-management{
+            background-image: var(--feature-connect-management);}
+        .thumbnail-connect-setup{
+            background-image: var(--feature-connect-setup);}
+        .thumbnail-partnership-request{
+            background-image: var(--feature-partnership-request);}
+        .thumbnail-partnership-requirements{
+            background-image: var(--feature-partnership-requirements);}
+        .thumbnail-partnership-staff{
+            background-image: var(--feature-partnership-staff);}
+        .thumbnail-partnership-tracking{
+            background-image: var(--feature-partnership-tracking);}
 
 :root{
     --feature-connect-advertise: url(/common/img/IllustrationConnectAdvertise.png);
     --feature-connect-management: url(/common/img/IllustrationConnect.png);
     --feature-connect-setup: url(/common/img/IllustrationConnectSetup.png);
+    --feature-partnership-request: url(/common/img/IllustrationPartnershipRequest.png);
     --feature-partnership-requirements: url(/common/img/IllustrationPartnershipRequirements.png);
     --feature-partnership-staff: url(/common/img/IllustrationPartnershipStaff.png);
+    --feature-partnership-tracking: url(/common/img/IllustrationPartnershipTracking.png);
 }
+
+
+/*box-shadow: 0px 0px 0px 1px var(--border-white) inset;*/
+/*box-shadow: 0px 1px 0px 0px var(--border-white) inset;*/
+/*box-shadow: 1px 0px 0px 0px var(--border-white) inset;*/

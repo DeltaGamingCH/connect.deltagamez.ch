@@ -27,8 +27,8 @@ function displayCommunities(communities) {
         communityElement.className = 'community';
         communityElement.innerHTML = `
             <div class="community-header">
-                <div class="community-header-title">
-                    <span class="community-header-title-badge tooltip-badge"></span>
+                <div class="community-header-title tooltip-badge">
+                    <span class="community-header-title-badge"></span>
                     <h2 class="community-header-title-title">${community.ServerName}</h2>
                 </div>
                 <div class="community-header-logo">
@@ -40,12 +40,12 @@ function displayCommunities(communities) {
             </div>
             <div class="community-footer">
                 <div class="community-footer-stats">
-                    <div class="community-footer-stats-members">
-                        <span class="community-footer-stats-members-icon tooltip-members"></span>
+                    <div class="community-footer-stats-members tooltip-members">
+                        <span class="community-footer-stats-members-icon"></span>
                         ${community.MemberCount}
                     </div>
-                    <div class="community-footer-stats-date">
-                        <span class="community-footer-stats-date-icon tooltip-date"></span>
+                    <div class="community-footer-stats-date tooltip-date">
+                        <span class="community-footer-stats-date-icon"></span>
                         ${formattedDate}
                     </div>
                 </div>
