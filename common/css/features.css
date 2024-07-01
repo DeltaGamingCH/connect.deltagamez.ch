@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: radial-gradient(circle, var(--black-50) 0%, var(--black-25) 100%);}
+    /*background: radial-gradient(circle, var(--black-50) 0%, var(--black-25) 100%);*/}
     /*.features-main::before{
         content: '';
         top: 0;
@@ -220,14 +220,17 @@
             background-image: var(--feature-partnership-requirements);}
         .thumbnail-partnership-staff{
             background-image: var(--feature-partnership-staff);}
-        
+        .thumbnail-partnership-tracking{
+            background-image: var(--feature-partnership-tracking);}
 
 :root{
     --feature-connect-advertise: url(/common/img/IllustrationConnectAdvertise.png);
     --feature-connect-management: url(/common/img/IllustrationConnect.png);
     --feature-connect-setup: url(/common/img/IllustrationConnectSetup.png);
+    --feature-partnership-request: url(/common/img/IllustrationPartnershipRequest.png);
     --feature-partnership-requirements: url(/common/img/IllustrationPartnershipRequirements.png);
     --feature-partnership-staff: url(/common/img/IllustrationPartnershipStaff.png);
+    --feature-partnership-tracking: url(/common/img/IllustrationPartnershipTracking.png);
 }
 
 
