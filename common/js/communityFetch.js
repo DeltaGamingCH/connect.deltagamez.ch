@@ -5,7 +5,7 @@
 getCommunities()*/
 
 async function loadCommunities() {
-    let data = await fetch('http://ec2-34-205-76-164.compute-1.amazonaws.com:3000/api/v1/servers/view/1').then(response => response.json()); //http://ec2-34-205-76-164.compute-1.amazonaws.com:3000/api/v1/servers/view/1 /common/js/server-testdata.json
+    let data = await fetch('https://api.deltagamez.ch:3000/api/v1/servers/view/1').then(response => response.json()); //http://ec2-34-205-76-164.compute-1.amazonaws.com:3000/api/v1/servers/view/1 /common/js/server-testdata.json
     //Hello there :) 
     //Instead of stalking our code, why don't you join writing it. https://deltagamez.ch/dg/jobs
     //When directly calling our api through your browser (not over connect) your IP is public to us.
