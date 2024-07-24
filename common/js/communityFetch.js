@@ -27,6 +27,7 @@ function displayCommunities(communities) {
 
         //Display Community
         const communityElement = document.createElement('li');
+        container.appendChild(communityElement);
         communityElement.className = 'community';
         communityElement.innerHTML = `
             <div class="community-header">
@@ -57,8 +58,8 @@ function displayCommunities(communities) {
                 </a>
             </div>
         `;
-    
-        container.appendChild(communityElement);
+        const serverIcon = communityElement.querySelector('.community-header-logo-icon');
+        serverIcon.style.backgroundImage = `url(${community.ServerIcon})`;
     }
 }
 
